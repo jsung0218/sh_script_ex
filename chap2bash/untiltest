@@ -1,0 +1,6 @@
+#!/usr/local/bin/bash
+until who | grep "root"
+do
+        sleep 10
+done
+echo "root is logged in"

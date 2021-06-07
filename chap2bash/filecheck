@@ -1,0 +1,8 @@
+#!/usr/local/bin/bash
+if [ -e /tmp/temp ]
+then
+        if [ -s /tmp/temp ]
+        then
+        echo "" > /tmp/temp
+        fi
+fi

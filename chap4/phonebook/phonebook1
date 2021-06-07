@@ -1,0 +1,74 @@
+#! /bin/sh
+
+DBASE="$HOME/phonebook"
+while :
+do 
+        echo -n "
+전화번호부
+
+a : 입력
+d : 삭제
+e : 수정
+s : 검색
+v : 출력
+[Enter] : 종료
+
+원하시는 작업은 ?(a,d,e,s,v,[ENTER]) : "
+read RSP
+ 
+        case $RSP in
+        "")      exit 0
+                ;;
+        a|A)     echo -n "
+이 름 = "
+                read NAME
+                if [ "$NAME" = "" ]
+                        then continue
+                fi
+                echo -n "직업 = "
+                read OCCU
+                echo -n "전화번호 = "
+                read NUM
+                echo    "$NAME	$OCCU			$NUM"   >> $DBASE
+                sort -o $DBASE $DBASE
+                ;;
+        d|D)     echo -n "
+삭제할 이름 : "
+                read NAME
+                if [ "$NAME" = "" ]
+                        then continue
+                fi
+                grep -iv "$NAME" $DBASE > $DBASE.new
+                mv $DBASE.new $DBASE
+                ;;
+        e|E)     vi $DBASE
+                ;;
+        s|S)     echo -n "
+검색할 이름 : "
+                read NAME
+                echo  "
+-----------------------------------------------------"
+echo "이름       직업                    전화번호"
+echo "-----------------------------------------------------"
+                grep -i "$NAME" $DBASE
+echo "-----------------------------------------------------"
+                echo -n "
+엔터를 누르시오"
+                read RSP
+                ;;
+        v|V)     echo  "
+        전화번호부" 
+                echo  "
+-----------------------------------------------------"
+echo "이름       직업                    전화번호"
+echo "-----------------------------------------------------"
+                more $DBASE
+echo "-----------------------------------------------------"
+                echo -n "
+엔터를 누르시오"
+                read RSP
+                ;;
+        *)      echo  "명령어가 틀렸습니다."
+                ;;
+        esac
+done

@@ -1,0 +1,12 @@
+#!/usr/local/bin/bash
+A=`ls *`
+select B in `echo $A`
+do
+  if [ "$B" = "" ]; then
+    continue;
+  fi
+  echo
+  echo $B
+  echo
+  cat $B
+done

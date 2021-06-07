@@ -1,0 +1,284 @@
+#! /bin/sh 
+
+HOME=`pwd`
+if [ ! -f $HOME/userdb ]; then
+  echo "guest guest" > $HOME/userdb
+fi
+if [ ! -d $HOME/Mail ];then
+  mkdir $HOME/Mail
+fi
+
+lineditor() {
+        lnum=0
+        lstr=nothing
+        echo "        Á¾·áÇÏ½Ã·Á¸é  .À» ÀÔ·ÂÇÏ¼Å¿ä "
+        echo "     ---------+---------+---------+---------+---------+---------+"
+        while [ "$lstr" != "." ]
+        do
+                lnum=`expr $lnum + 1`
+                pnum=`echo "$lnum   " |cut -c1-3`
+                echo -n "$pnum: "
+                read lstr
+                if [ "$lstr" != "." ]
+                then
+                        echo $lstr >> $1
+                fi
+        done
+}
+
+getin() {
+        clear
+        echo "Ã³À½ ¿À½Å ºÐÀº guest¸¦ ÀÔ·ÂÇÏ¼Å¿ä."
+        echo "Password¿¡µµ guest¸¦ ÀÔ·ÂÇÏ¼Å¿ä."
+        while [ : ]
+        do
+                echo -n "User ID : "
+                read userid
+                checkid=`grep "^$userid " $HOME/userdb`
+                if [ "$checkid" = "" ]
+                then
+                        echo "µî·ÏµÇÁö ¾ÊÀº IDÀÔ´Ï´Ù."
+                else
+                        echo -n "Password : "
+                        read userpw
+                        checkpw=`echo $checkid | cut -d" " -f2`
+                        if [ "$checkpw" = "$userpw" ]
+                        then
+                                break
+                        else 
+                                echo "Password°¡ Æ²¸³´Ï´Ù."
+                        fi
+                fi
+        done
+        maildir=$HOME/Mail/$userid
+        if [ ! -d $HOME/Mail/$userid ];then
+          mkdir $HOME/Mail/$userid
+        fi
+        if [ ! -f $HOME/Mail/$userid/mailcount ];then
+          echo "0" > $HOME/Mail/$userid/mailcount
+        fi
+}
+
+top() {
+pmenu=top
+cmenu=top
+while [ $menuname = $cmenu ]
+do
+        clear
+        echo "
+   1. È¸¿øÁ¤º¸(users)
+   2. °Ô½ÃÆÇ(board)
+   3. ÀÚ·á½Ç(pbs)
+   4. ÆíÁö°ü¸®(mails)
+   5. ´ëÈ­¹æ(chat) 
+"
+        getop "¹øÈ£/¸í·É(H,T,P,GO,Z,WH,X) >>"
+if [ $x = 1 ] 
+        then
+        menuname=users 
+        elif [ $x = 2 ]
+                then
+                menuname=board 
+                elif [ $x = 3 ]
+                        then
+                        menuname=pbs
+                        elif [ $x = 4 ]
+                                then
+                                menuname=mails
+                        elif [ $x = 5 ]
+                                then
+                                menuname=chat
+fi
+done
+}
+
+mails() {
+pmenu=top
+cmenu=mails
+while [ $menuname = $cmenu ]
+do
+clear
+echo "
+          ¡¡                                      ¡¡
+          ¡¡        1. ÆíÁö ¹Þ±â(RMAIL)           ¡¡
+          ¡¡                                      ¡¡
+          ¡¡        2. ÆíÁö º¸³»±â(WMAIL)         ¡¡
+          ¡¡                                      ¡¡
+"
+getop "¹øÈ£/¸í·É(H,T,P,GO,Z,WH,X) >>" 
+if [ "$x" = "1" ] 
+        then
+        menuname=rmail 
+        elif [ "$x" = "2" ]
+                then
+                menuname=wmail 
+fi
+done
+}
+
+rmail()
+{
+        pmenu=mails
+        cmenu=rmail
+        cdir=$maildir
+        cheader=$cdir/mailheader
+        view
+}
+
+view() {
+while [ $menuname = $cmenu ]
+do
+        clear
+        echo " ¹ß½ÅÀÎ   Å©±â  ÀÏÀÚ   ½Ã°£   ¹øÈ£       Á¦¸ñ "
+        echo "---------------------------------------------------------------"
+ 
+        more $cheader 2> /dev/null
+        getop "¹øÈ£/¸í·É(H,T,P,PR,W,DN,UP,D,GO,Z,WH,X) >>"
+        if [ -f $cdir/$x ]
+                then
+                filenum=$cdir/$x
+                pmenu=$menuname
+                menuname=readfile
+        fi
+done
+}
+
+readfile (){
+        cmenu=readfile
+        while [ $menuname = $cmenu ]
+        do
+                clear
+                more $filenum
+                getop "¹øÈ£/¸í·É(H,T,P,GO,Z,WH,X) >>"
+        done
+}
+
+wmail ()
+{
+        pmenu=mails
+        cmenu=wmail
+        clear
+        echo -n "ÆíÁö¸¦ ¹ÞÀ» »ç¶÷ : "
+        read xid
+        cdir=$HOME/Mail/$xid
+        cheader=$cdir/mailheader
+        countfile=$cdir/counter
+        if [ -d $cdir ]
+        then
+                if [ -f $countfile ]
+                then :
+                else 
+                        echo "0" > $countfile 2> /dev/null
+                fi
+                compile w
+        else
+                echo "µî·ÏµÇÁö ¾ÊÀº »ç¿ëÀÚÀÔ´Ï´Ù. "  
+                sleep 1
+        fi
+        menuname=$pmenu 
+}
+
+getop() {
+echo "[23H"
+while [ $menuname = $cmenu ]
+do
+echo -n "$1"
+read x
+compile $x
+done
+}
+
+help() {
+echo "
+¹øÈ£ : ÇØ´ç¹øÈ£ÀÇ ±Û ÀÐ±â
+H    : µµ¿ò¸»
+T    : ÃÊ±âÈ­¸éÀ¸·Î ÀÌµ¿
+P    : »óÀ§ ¸Þ´º·Î ÀÌµ¿
+PR   : ÇØ´ç ±Û ÀÏ°ý Ãâ·Â    (»ç¿ë¹ý : pr + ±Û¹øÈ£)
+W    : ±Û¾²±â 
+D    : ÇØ´ç¹øÈ£ÀÇ ±Û »èÁ¦   (»ç¿ë¹ý : d + ±Û¹øÈ£)
+GO   : °Ô½ÃÆÇÀ¸·Î Á÷Á¢ ÀÌµ¿ (»ç¿ë¹ý : go + °Ô½ÃÆÇ¸í)
+Z    : È­¸é Á¤¸®
+WH   : ÇöÀç Á¢¼ÓÀÚ ¸í´Ü
+X    : Á¢¼Ó Á¾·á
+"
+}
+
+compile(){ 
+case $1 in
+        h|H)
+                help;;
+        p|P)
+                cmenu=bottom
+                menuname=$pmenu;;
+        x|X)    
+                exit;;
+        [1-9]*) 
+                cmenu=bottom;;
+        t|T)
+                cmenu=bottom
+                menuname=top;;
+        w|W)
+        echo -n "Á¦¸ñÀ» ³Ö¾î ÁÖ¼¼¿ä. : " 
+        read title
+        echo -n "editor¸¦ ¼±ÅÃÇÏ¼¼¿ä...
+        1. vi editor  2. line editor  0. Ãë¼Ò : "
+        read x
+        if [ "$x" = "1" -o "$x" = "2" ]
+        then 
+                cd $cdir
+                 tempnum=`cat $countfile`
+                 num=`expr $tempnum + 1`
+                echo $num > $countfile
+                if [ "$x" = "1" ]
+                then
+                         vi $num
+                 else
+                         lineditor $num
+                 fi
+                 if [ -s $num ]
+                 then
+                 tempheader=`ls -al $num 2> /dev/null | cut -c35-67` 
+                 echo    "$userid	$tempheader		$title"     >> $cheader
+                echo -n "
+                Àü¼ÛµÆ½À´Ï´Ù.  <Enter>¸¦ ´©¸£¼¼¿ä. "
+                 read x
+                 fi
+                 cd $HOME
+        fi
+                cmenu=bottom;;
+        wh|WH)
+                w -h|cut -c1-8;;
+        go|GO)
+                cmenu=bottom
+                menuname=$2
+                x=go;;
+        pr|PR) 
+                cat $2;;
+        d|D)
+                if [ -f $cdir/$2 ]
+                then
+                        temp=`ls -al $cdir/$2 | cut -c35-55`
+                        grep -v "$temp" $cheader > temp
+                        mv temp $cheader
+                        rm $cdir/$2 2> /dev/null
+                fi        
+                x=d
+                cmenu=bottom;;
+        z|Z)
+                cmenu=bottom;;
+ esac
+}
+
+bbs (){
+getin
+menuname=top
+while [ 1 ]
+do
+        $menuname 
+done
+}
+
+bbs
+
+

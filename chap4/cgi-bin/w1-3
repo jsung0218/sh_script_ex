@@ -1,0 +1,17 @@
+#!/bin/sh
+
+query=`echo $QUERY_STRING | tr "&" "\n"`
+eval $query
+
+cat << EOM
+Content-type: text/html
+
+<html><body>
+<pre>
+QUERY_STRING = $QUERY_STRING
+$query
+a = $a
+b = $b
+</pre>
+</body></html>
+EOM

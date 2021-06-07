@@ -1,0 +1,14 @@
+#! /bin/csh
+switch ($<)
+        case x:
+        case X:
+                echo "Exit"
+                exit
+                breaksw
+        case list:
+                ls
+                breaksw
+        default:
+                echo "Hello"
+endsw
+

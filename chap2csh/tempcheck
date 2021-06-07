@@ -1,0 +1,6 @@
+#! /bin/csh
+if (-e temp) then
+	mv temp temp1
+else if (-e temp1) then
+	mv temp1 temp2
+endif

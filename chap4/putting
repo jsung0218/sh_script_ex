@@ -1,0 +1,69 @@
+#!/bin/sh
+putfile() {
+        targetsize=-1
+        compress  -f $1
+        sourcesize=`l $1.Z | cut -c30-41`
+        while [ $targetsize -ne $sourcesize ]
+        do
+                rm puterr
+                rcp $1.Z host2:/user/guest/$1.Z 2> puterr
+                if [ -s ./puterr ]
+                then
+                        targetsize=-1
+                else 
+                        targetsize=`rsh  host2  "ls  -l  /user/guest/$1.Z"  |  cut 
+-c30-41` 
+                fi
+                if [ $targetsize -ne $sourcesize ]
+                then
+                        echo "Put Error"
+                        rsh host2 rm /user/guest/$1.Z
+                else
+                        echo "NO puterror"
+                        rsh host2 "uncompress -f /user/guest/$1.Z "
+                fi
+        done
+        uncompress  -f $1.Z
+}
+
+putfilexf() {
+
+        targetsize=-1
+        rm x*
+        uncompress -f $1
+        split -100 $1
+        xlist=`ls x??`
+        sourcesize=`ls -l $1 | cut -c30-41`
+
+        while [ $sourcesize -ne $targetsize ]
+        do 
+                rsh host2 rm /user/guest/x*    
+ 
+                for xfile in `echo $xlist`
+                do
+                        putfile $xfile
+                done
+
+                rsh host2 "uncompress -f /user/guest/x??.Z"
+                rsh host2 cat /user/guest/x?? ">" /user/guest/$1
+                targetsize=`rsh host2 "ls -l /user/guest/$1" | cut -c30-41`
+                if [ $sourcesize -eq $targetsize ]
+                then
+                        grep -v $1 unputfile | sort | uniq > tempfile
+                        mv tempfile unputfile
+                fi
+        done
+
+        rsh host2  rm /user/guest/x*
+        rm x*
+}
+
+putfiles() {
+        files=`cat unputfile`
+        for filetoput in `echo $files`
+        do
+                putfilexf $filetoput
+        done
+}
+
+putfiles

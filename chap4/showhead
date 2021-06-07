@@ -1,0 +1,6 @@
+#!/bin/sh
+while read File
+do
+        echo "Filename : $File"
+        head -10 $File
+done

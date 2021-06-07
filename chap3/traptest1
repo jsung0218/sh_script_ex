@@ -1,0 +1,7 @@
+
+trap 'echo 9; exit' 9 15
+while :
+do
+        :
+done
+

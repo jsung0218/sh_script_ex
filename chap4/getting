@@ -1,0 +1,41 @@
+#!/bin/sh
+getfilef() {
+
+          targetsize=-1
+          rsh host2 "compress -f /user/guest/$1"
+          sourcesize=`rsh host2 "ls -l /user/guest/$1.Z" | cut -c30-41`
+          while [ $sourcesize -ne $targetsize ]
+          do
+                rm err
+                rcp host2:/user/guest/$1.Z . 2> err
+                if [ -s err ]
+                then
+                        targetsize=-1
+                else
+                        targetsize=`ls -l $1.Z | cut -c30-41`
+                fi
+                if [ $sourcesize -ne $targetsize ]
+                then 
+                        echo "Get Error $1"
+                        rm -f $1.Z
+                else
+                        echo "No get error $1"
+                        uncompress -f $1.Z
+                        grep -v $1 ungetfile | sort | uniq > tempfile
+                        mv tempfile ungetfile
+                fi
+          done
+          rsh host2 "uncompress -f /user/guest/$1.Z"
+
+}
+
+
+getfiles() {
+        files=`cat ungetfile`
+        for filetoget in `echo $files`
+        do
+                getfilef $filetoget
+        done
+}
+
+getfiles

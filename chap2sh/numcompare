@@ -1,0 +1,14 @@
+#!/bin/sh
+A=1
+B=2
+
+if [ $A -eq $B ]
+then
+echo " A is equal to B "
+elif [ $A -gt $B ]
+then
+echo " A is greater than B "
+elif [ $A -lt $B ]
+then
+echo " A is less than B "
+fi

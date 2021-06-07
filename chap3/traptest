@@ -1,0 +1,7 @@
+
+trap 'rm -f temp; exit' 2
+while :
+do
+        :
+done
+

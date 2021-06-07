@@ -1,0 +1,11 @@
+#!/usr/local/bin/bash
+while :
+do
+        read x
+        if [ "$x" = "yes" ]
+        then 
+                continue
+        else
+                break
+        fi
+done

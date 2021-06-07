@@ -1,0 +1,6 @@
+#!/bin/sh
+cp temp temp1 2> errorfile
+if [ -s errorfile ]
+then 
+        echo "Error"
+fi

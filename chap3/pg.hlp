@@ -1,0 +1,23 @@
+
+-------------------------------------------------------
+   h               help
+   q or Q          quit
+   <blank> or \n   next page
+   l               next line
+   d or ^D         display half a page more
+   . or ^L         redisplay current page
+   f               skip the next page forward
+   n               next file
+   p               previous file
+   $               last page
+   w or z          set window size and display next page
+   s savefile      save current file in savefile
+   /pattern/       search forward for pattern
+   ?pattern? or
+   ^pattern^       search backward for pattern
+   !command         execute command
+Most commands can be preceeded by a number, as in:
++1\n (next page,stdout); -1\n (previous page); 1\n (page 1).
+See the manual page for more detail.
+-------------------------------------------------------
+

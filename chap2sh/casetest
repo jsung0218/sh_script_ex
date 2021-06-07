@@ -1,0 +1,11 @@
+#!/bin/sh
+read temp
+case "$temp" in
+        x|X)
+                echo "Exit"
+                exit;;
+        list)
+                ls;;
+        *)
+                echo "Hello";;
+esac

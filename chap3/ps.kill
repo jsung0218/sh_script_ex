@@ -1,0 +1,4 @@
+
+imsi=`ps -aux|grep -v "ps.kill" | grep "$*"|cut -c9-14|sort -r`
+imsi1=`echo $imsi`
+kill -9 $imsi1

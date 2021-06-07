@@ -1,0 +1,180 @@
+#! /bin/sh
+DBASE="$HOME/phonebook"
+checkrun() {
+        while [ -f running ]
+        do
+                sleep 2
+        done
+        touch running
+}
+adding() {
+        if [ -s $$.add ]
+        then
+                checkrun
+                cat $$.add >> $DBASE 2> /dev/null
+                rm $$.add 2> /dev/null
+                rm running
+        fi
+}
+deleting() {
+        if [ -s $$.del ]
+        then
+                checkrun
+                echo "w" >> $$.del 
+                ed $DBASE < $$.del 2> /dev/null
+                rm $$.del
+                rm running
+        fi
+}
+editing() {
+        if [ -s $$.edit ]
+        then
+                checkrun
+                echo "w" >> $$.edit
+                ed $DBASE < $$.edit 2> /dev/null
+                rm $$.edit
+                rm running
+        fi
+}
+sorting() {
+        checkrun
+        sort -o $DBASE $DBASE
+        rm running
+}
+while :
+do 
+        echo -n "
+                        전화번호부
+        a : 입력
+        d : 삭제
+        e : 수정
+        s : 검색
+        v : 출력
+        t : sort
+        [Enter] : 종료
+원하시는 작업은 ?(a,d,e,s,v,[ENTER]) : "
+read RSP
+ 
+        case $RSP in
+        "")      exit 0
+                ;;
+        a|A)     
+                ASK=y
+                while [ "$ASK" = "y" -o "$ASK" = "Y" ]
+                do
+                echo -n "
+이 름 = "
+                read NAME
+                if [ "$NAME" = "" ]
+                        then break
+                fi
+                echo -n "직업 = "
+                read OCCU
+                echo -n "전화번호 = "
+                read NUM
+                echo  "$NAME	$OCCU			$NUM"      >> $$.add
+                echo -n "Continue ? (y/n) (default = y) "
+                read ASK
+                if [ "$ASK" = "" ]
+                        then ASK=y
+                fi
+                done
+                adding &
+                ;;
+        d|D)    
+                ASK=y
+                while [ "$ASK" = "y" -o "$ASK" = "Y" ]
+                do 
+                echo -n "
+삭제할 이름 = "
+                read NAME
+                if [ "$NAME" = "" ]
+                        then break
+                fi
+                echo "/$NAME/d" >> $$.del
+                echo -n "Continue ? (y/n) (default = y) "
+                read ASK
+                if [ "$ASK" = "" ]
+                        then ASK=y
+                fi
+                done
+                deleting &
+                ;;
+        e|E)    
+                ASK=y
+                while [ "$ASK" = "y" -o "$ASK" = "Y" ]
+                do  
+                echo -n "
+수정할 이 름 = "
+                read NAME
+                if [ "$NAME" = "" ]
+                        then break
+                fi
+                echo -n "직업 = "
+                read OCCU
+                echo -n "전화번호 = "
+                read NUM
+                echo "/$NAME/c" >> $$.edit
+                echo  "$NAME	$OCCU			$NUM"      >> $$.edit
+                echo . >> $$.edit 
+                echo -n "Continue ? (y/n) (default = y) "
+                read ASK
+                if [ "$ASK" = "" ]
+                        then ASK=y
+                fi
+                done
+         
+                editing &
+                ;;
+        s|S)    
+                ASK=y
+                while [ "$ASK" = "y" -o "$ASK" = "Y" ]
+                do  
+                echo -n "
+검색할 이름 = "
+                read NAME
+                if [ "$NAME" = "" ]
+                        then NAME=.*
+                fi
+                echo -n "검색할 직업酋= "
+                read OCCU
+                if [ "$OCCU" = "" ]
+                        then OCCU=.*
+                fi
+                echo -n "검색할 전화번호 = "
+                read NUM
+                if [ "$NUM" = "" ]
+                        then NUM=.*
+                fi
+                echo  "
+-----------------------------------------------------"
+echo "이름       직업                    전화번호"
+echo "-----------------------------------------------------"
+                grep -i "$NAME" $DBASE | grep -i "$OCCU" | grep -i "$NUM"
+echo "-----------------------------------------------------"
+                echo -n "Continue ? (y/n) (default = n) "
+                read ASK
+                if [ "$ASK" = "" ]
+                        then ASK=n
+                fi
+                done
+                ;;
+        v|V)     echo  "
+        전화번호부" 
+                echo  "
+-----------------------------------------------------"
+echo "이름       직업                    전화번호"
+echo "-----------------------------------------------------"
+                more $DBASE
+echo "-----------------------------------------------------"
+                echo -n "
+엔터를 누르시오"
+                read RSP
+                ;;
+        t|T)
+                sorting &
+        	;;
+        *)      echo  "명령어가 틀렸습니다."
+                ;;
+        esac
+done

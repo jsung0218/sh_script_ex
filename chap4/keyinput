@@ -1,0 +1,14 @@
+#!/bin/sh
+line() { read x ;echo $x; }
+
+ls -1 | while read filename
+do
+        echo -n "Show contents of $filename (y/n)? "
+    X=`line < /dev/tty`
+    if [ "$X" = "y" ]
+    then
+        cat $filename
+    fi
+done
+
+

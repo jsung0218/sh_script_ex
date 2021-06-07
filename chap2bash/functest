@@ -1,0 +1,12 @@
+#!/usr/local/bin/bash
+function multicopy()
+{
+        source=$1
+        while [ $# -gt 1 ]
+        do
+                cp $source $2
+                shift
+        done
+}
+
+multicopy temp temp1 temp2 temp3

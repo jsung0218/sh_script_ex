@@ -1,0 +1,36 @@
+ex $1 <<ends
+g/[^ ]\=[^ ]/s/^/set /
+g/\[ /s//(/g
+g/ \]/s//)/g
+g/ = /s// =\~ /g
+g/ != /s// !\~ /g
+g/ -eq /s// == /g
+g/ -ne /s// != /g
+g/ -gt /s// > /g
+g/ -ge /s// >= /g
+g/ -lt /s// < /g
+g/ -le /s// <= /g
+g/ -s /s// ! -z /g
+g/ -a /s// \&\& /g
+g/ -o /s// || /g
+g/then/s//then\r/g
+g/then/d
+g/if .*/s//& then/g
+g/^[ 	]*$/d
+g/elif/s//else if/g
+g/fi[ 	]*$/s//endif/g
+g/for/s//foreach/g
+g/done/s//end/g
+g/^[ 	]*do[ 	]*$/d
+g/case/s//switch/g
+g/;;/s//\rbreaksw/g
+g/\*)/s//default:/g
+g/esac/s//endsw/g
+g/read .*/s//set &=\$</g
+g/ read/s///g
+g/\$[0-9]/s//\$argv\[&\]/g
+g/argv\[\\\$/s//argv\[/g
+g/\$\*/s//\$argv\[\*\]/g
+g/\$\#/s//\$#argv/g
+w! $1.btc
+ends

@@ -1,0 +1,37 @@
+#!/bin/sh
+. ./var16.sh
+
+print_result() {
+cat - << EOM
+Content-type: text/html
+
+<html><body>
+$1
+</body></html>
+EOM
+}
+
+
+if [ "X$REQUEST_METHOD" = "XPOST" -a "$CONTENT_LENGTH" -gt 0 ]; then
+  QUERY_STRING="${QUERY_STRING}&"`dd count=$CONTENT_LENGTH bs=1 2> /dev/null`
+fi
+
+if [ "X$QUERY_STRING" != "X" ]; then
+query=`echo "$QUERY_STRING\"" | sed -e "s/^&*//" -e "s/&/\";/g" -e "s/=/=\"/g" -e "s/+/ /g" -e "s/%/\\$C_/g" -e "s/C_[0-9a-fA-F][0-9a-fA-F]/\{&\}/g"`
+eval $query
+fi
+
+if grep "$email" /tmp/quiz.data > /dev/null
+then
+print_result "이미 등록하셨습니다."
+exit
+fi
+
+if grep "$REMOTE_ADDR\|$name\|" /tmp/quiz.data > /dev/null
+then
+print_result "이미 등록하셨습니다."
+exit
+fi
+
+echo "$REMOTE_ADDR|$name|$email|$answer" >> /tmp/quiz.data
+print_result "감사합니다."

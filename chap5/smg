@@ -1,0 +1,172 @@
+#!/bin/sh
+
+psv() {
+ps -aux| grep "$*"|sort -r|more
+}
+
+psk() {
+imsi=`ps -aux| grep -v $$ | grep "$*"|cut -c9-14|sort -r`
+imsi1=`echo $imsi`
+kill -9 $imsi1
+}
+
+prm() {
+while :
+do
+	clear
+	echo -n "
+	1. kill process
+	2. view process
+	
+	Select ? (1,2,[ENTER]) "
+	read ans
+	case $ans in
+	"")
+		return
+		;;
+	1)
+		echo -n "Which Process : "
+		read pro
+		if [ "$pro" = "" ]
+		then
+			echo "View process first"
+		else
+			psk $pro
+		fi
+		;;
+	2)	
+		echo -n "Which Process : "
+		read pro
+		psv $pro
+		;;
+	esac
+	echo "Press Enter Continue...."
+	read x 
+done
+}
+
+usm() {
+while :
+do
+	clear
+	echo -n "
+	1. View Current user 
+	2. User Info 
+	3. Kill User
+	
+	Select ? (1,2,3,[ENTER]) "
+	read ans
+	case $ans in
+	"")
+		return
+		;;
+	1)
+		w
+		;;
+	2)
+		echo -n "Which User : "
+		read usr
+		if [ "$usr" = "" ]
+		then
+			echo "Try again"
+		else
+			echo
+			last $usr | more
+			echo
+			w $usr
+			echo
+			finger $usr
+			echo
+			cat /etc/passwd |grep "$usr"
+			echo
+		fi
+		;;
+	3)
+		echo -n "Which User : "
+		read usr
+		if [ "$usr" = "" ]
+		then
+			echo "Try again"
+		else
+			psk $usr
+		fi
+		;;
+	esac
+	echo "Press Enter Continue...."
+	read x 
+done
+}
+
+fsm() {
+while :
+do
+	clear
+	echo -n "
+	1. Drive Space Check
+	2. Directory Space Check
+	3. View directory
+	4. Delete 
+	
+	Select ? (1,2,3,4,[ENTER]) "
+	read ans
+	case $ans in
+	"")
+		return
+		;;
+	1)
+		df
+		;;
+	2)
+		echo -n "Which Directory : "
+		read dir
+		du $dir |more
+		;;
+	3)
+		echo -n "Which Directory : "
+		read dir
+		ls -al $dir | more
+		;;
+	4)
+		echo -n "Which Directory or file : "
+		read dir
+		if [ "$dir" = "" ]
+		then
+			echo "Try again"
+		else
+			mv $dir /tmp
+		fi
+		;;
+	esac
+	echo "Press Enter Continue...."
+	read x 
+done
+}
+
+while :
+do 
+	clear
+	echo -n "
+		System Manager version 1.0
+
+	p : process managing
+	u : user managing
+	f : file systerm managing
+	[Enter] : exit 
+
+	Select ?(p,u,f,[ENTER]) : "
+	read RSP
+	case $RSP in
+	"")	exit 0
+		;;
+	p|P)
+		prm
+		;;
+	u|U)
+		usm
+		;;
+	f|F)
+		fsm
+		;;
+	esac
+done
+

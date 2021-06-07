@@ -1,0 +1,41 @@
+#!/bin/sh
+read userid
+usertty=`tty`
+ROOM=`pwd`/Chat
+if [ ! -d $ROOM ];then
+  mkdir $ROOM
+fi
+
+chat (){
+echo "현재 대화방에 있는 사람들  "
+cat $ROOM/chatter 2> /dev/null | cut -d" " -f1 2> /dev/null
+echo  
+echo -n "대화방에 참여하시겠습니까 ? "
+read ASK
+if [ "$ASK" = "y" -o "$ASK" = "Y" ]
+then
+        echo "$userid $usertty" >> $ROOM/chatter
+else
+        return
+fi
+while :
+do
+        echo -n ">>"
+        read str
+        if [ "$str" = "quit" ]
+        then
+                grep -v $usertty $ROOM/chatter > $ROOM/temp
+                mv $ROOM/temp $ROOM/chatter
+                return
+        fi 
+        chatty=`cat $ROOM/chatter | cut -d" " -f2`
+        for couser in `echo $chatty`
+        do
+                echo "
+[$userid] $str" > $couser 
+        done
+done
+}
+
+chat
+

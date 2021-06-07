@@ -1,0 +1,15 @@
+#! /bin/csh
+if (-e temp) then
+        goto change1
+else if (-e temp1) then
+        goto change2
+endif
+
+change1:
+        mv temp temp1
+        goto done
+change2:
+        mv temp1 temp2
+done:
+
+

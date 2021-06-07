@@ -1,0 +1,25 @@
+#!/bin/sh
+. ./var16.sh
+
+if [ "X$REQUEST_METHOD" = "XPOST" -a "$CONTENT_LENGTH" -gt 0 ]; then
+  QUERY_STRING="${QUERY_STRING}&"`dd count=$CONTENT_LENGTH bs=1 2> /dev/null`
+fi
+
+if [ "X$QUERY_STRING" != "X" ]; then
+query=`echo "$QUERY_STRING\"" | sed -e "s/^&*//" -e "s/&/\";/g" -e "s/=/=\"/g" -e "s/+/ /g" -e "s/%/\\$C_/g" -e "s/C_[0-9a-fA-F][0-9a-fA-F]/\{&\}/g"`
+eval $query
+fi
+
+cat - << EOM
+Content-type: text/html
+
+<html><body>
+<pre>
+QUERY_STRING = $QUERY_STRING
+CONTENT_LENGTH = $CONTENT_LENGTH
+$query
+a = $a
+b = $b
+</pre>
+</body></html>
+EOM

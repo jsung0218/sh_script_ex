@@ -1,0 +1,6 @@
+#! /bin/csh
+foreach B (*)
+        echo $B
+        cat $B
+end
+

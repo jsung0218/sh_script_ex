@@ -1,0 +1,62 @@
+#!/bin/sh
+read userid
+usertty=`tty`
+ROOM=`pwd`/Chat
+if [ ! -d $ROOM ];then
+  mkdir $ROOM
+fi
+if [ ! -f $ROOM/linenum ];then
+  echo "0" > $ROOM/linenum
+fi
+
+chat (){
+        pmenu=top
+        cmenu=chat
+        clear
+        echo "ÇöÀç ´ëÈ­¹æ¿¡ ÀÖ´Â »ç¶÷µé  "
+        cat $ROOM/chatter 2> /dev/null | cut -d" " -f1 2> /dev/null
+        echo  
+        echo -n "´ëÈ­¹æ¿¡ Âü¿©ÇÏ½Ã°Ú½À´Ï±î ? "
+        read ASK
+        if [ "$ASK" = "y" -o "$ASK" = "Y" ]
+        then
+                echo "$userid $usertty" >> $ROOM/chatter
+        else
+         menuname=$pmenu 
+                return
+        fi
+        clear
+        while :
+        do
+                echo -n "[23H                                                         "
+                echo -n "[24H                                                         "
+                echo -n "[23H >>"
+                read str
+                if [ "$str" = "/q" ]
+                then
+                        grep -v $usertty $ROOM/chatter > $ROOM/temp
+                        mv $ROOM/temp $ROOM/chatter
+                        menuname=$pmenu 
+                        return
+                fi 
+                chatty=`cat $ROOM/chatter | cut -d" " -f2`
+                 tempnum=`cat $ROOM/linenum`
+                 num=`expr $tempnum + 1`
+                if [ $num -ge 19 ]
+                then
+                        num=1
+                fi
+                 echo $num > $ROOM/linenum
+                for couser in `echo $chatty`
+                do
+                        echo "[$num;1H [$userid] $str                                   
+                                                                                         
+                                                                        
+[23H   " > $couser 
+                done
+        done
+        menuname=$pmenu 
+}
+
+
+chat

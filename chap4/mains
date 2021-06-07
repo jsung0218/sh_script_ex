@@ -1,0 +1,5 @@
+#!/bin/sh
+
+EXS="mains"
+. ./externs
+./externs

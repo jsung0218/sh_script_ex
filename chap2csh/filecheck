@@ -1,0 +1,6 @@
+#! /bin/csh
+if (-e /tmp/temp) then
+        if (! -z /tmp/temp) then
+                echo "" > /tmp/temp
+        endif
+endif

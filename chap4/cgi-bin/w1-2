@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cat << EOM
+Content-type: text/html
+
+<html><body>
+Hello World!
+</body></html>
+EOM

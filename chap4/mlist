@@ -1,0 +1,20 @@
+
+if [ "`echo $1 | cut -c1`" = "-" ]
+then
+        case $1 in
+                -m)
+                        Page="| more";;
+                -p)
+                        Page="| pg";;
+                *)
+                        echo "It's not proper option."
+                        exit 1;;
+        esac
+        shift
+else
+        Page=""
+fi
+
+eval ls $@ $Page
+
+

@@ -1,0 +1,14 @@
+if [ -f /tmp/$1 ]
+then
+        echo -n "Do you want undelete $1 ? (y/n)"
+        read x
+        case $x in
+                y|Y)
+                        mv /tmp/$1 ./$1;;
+                *)
+                        echo "$1 is not undeleted";;
+        esac
+else
+        echo "Cannot undelete $1"
+fi
+

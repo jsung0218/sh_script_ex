@@ -1,0 +1,9 @@
+#!/bin/sh
+A=`ls *`
+for B in `echo $A`
+do
+        echo
+        echo $B
+        echo
+        cat $B
+done

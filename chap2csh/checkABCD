@@ -1,0 +1,5 @@
+#! /bin/csh
+if ($A =~ $B && $C !~ $D) then
+        set E=${A}${B}${C}${D}
+endif
+

@@ -1,0 +1,19 @@
+#! /bin/csh -x
+alias multicopy '  set argv = (\!*); \\
+        set source = \!:1; \\
+        shift argv; \\
+         eval " \\
+        if ($#argv > 0) then \\
+                cp $source $argv[1] \\
+        endif \\
+        if ($#argv > 1) then \\
+                cp $source $argv[2] \\
+        endif \\
+        if ($#argv > 2) then \\
+                cp $source $argv[3] \\
+        endif \\
+"'
+
+multicopy temp temp1 temp2 temp3
+
+

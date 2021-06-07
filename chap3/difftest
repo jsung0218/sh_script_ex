@@ -1,0 +1,10 @@
+
+diff file1 file2 > temp
+if [ -s temp ]
+then
+        echo "Different File"
+else
+        echo "Same File"
+fi
+
+

@@ -1,0 +1,190 @@
+
+catch                  - Print a list of the caught signals
+catch <num> <num>...   - Catch signal(s) numbered <num>
+catch <sig> <sig>...   - Catch signal(s) named by <sig>
+clear                  - Clear all breakpoints at the current stopping point
+clear <lineno>         - Clear all breakpoints at <lineno>
+cont [sig <signo>]     - Continue execution with signal <signo>
+cont at <line> [sig <signo>]
+                       - Continue execution at line <line> with signal <signo>
+delete <number> ...    - Remove trace's, when's, or stop's of given number(s)
+delete all             - Remove all trace's, when's, and stop's
+ignore                 - Print a list of the ignored signals
+ignore <num> <num>...  - Ignore signal(s) numbered <num>
+ignore <sig> <sig>...  - Ignore signal(s) named by <sig>
+next                   - Step one line (skip OVER calls)
+next <n>               - Step <n> lines (skip OVER calls)
+rerun                  - Begin execution of the program with no arguments
+rerun <args>           - Begin execution of the program with new arguments
+run                    - Begin execution of the program with the current arguments
+run <args>             - Begin execution of the program with new arguments
+status                 - Print trace's, when's, and stop's in effect
+status > <filename>    - The same, but redirect output into file <filename>
+                         eg: status > foo
+step                   - Single step one line (step INTO calls)
+step <n>               - Single step <n> lines (step INTO calls)
+stop at <line> [if <cond>]  - Stop execution at the line
+stop in <proc> [if <cond>]  - Stop execution when <proc> is called
+stop <var> [if <cond>]      - Stop when value of <var> changes
+                              NOTE: Optional [if <cond>] causes execution to
+                                    stop only if condition <cond> is true
+                                    when appropriate stopping point is reached
+                              eg:   stop at 100 if i == 5
+stop if <cond>              - Stop if condition true
+trace [if <cond>]                   - Trace each source line
+trace in <proc> [if <cond>]         - Trace each source line while in proc
+trace <line#> [if <cond>]           - Trace execution of the line
+trace <proc> [if <cond>]            - Trace calls to the procedure
+trace <exp> at <line#> [if <cond>]  - Print <exp> when <line> is reached
+trace <var> [in <proc>] [if <cond>] - Trace changes to the variable
+                                    - NOTE: Optional <if cond> causes tracing
+                                            to be performed only when
+                                            condition <cond> is true as trace
+                                            point is reached
+                                      eg:   trace 100 if i == 5
+when at <line> { cmd; }- Execute command(s) when <line> reached
+when in <proc> { cmd; }- Execute command(s) when <proc> called
+when <exp> { cmd; }    - Execute command(s) when <exp> true
+assign <var> = <exp>   - Assign the value of the <exp> to <var>
+set <var> = <exp>      - Assign the value of the <exp> to <var>
+call <proc>([params])  - Call the procedure
+display                - Print the list of expressions being displayed
+display <exp>, ...     - Display the value of expressions <exp>, ... at every
+                         stopping point
+down                   - Move down the call stack one level
+down <number>          - Move down the call stack <number> levels
+dump                   - Print all variable local to the current procedure
+dump <proc>            - Print all variables local to <proc>
+print <exp>, ...       - Print the value of the expression(s) <exp>, ...
+assign <var> = <exp>   - Assign the value of the <exp> to <var>
+set <var> = <exp>      - Assign the value of the <exp> to <var>
+undisplay <exp>, ...   - Undo the effect of the `display' command
+up                     - Move up the call stack one level
+up <number>            - Move up the call stack <number> levels
+whatis <name>          - Print the declaration of the <name>
+where                  - Print a procedure traceback
+where <num>            - Print the <num> top procedure in the traceback
+whereis <name>         - Print all declarations of <name>
+which <name>           - Print full qualification of <name>
+cd                     - Change to the $HOME directory
+cd <dir>               - Change the current <dir>
+edit                   - Edit the current file
+edit <filename>        - Edit the specified file <filename>
+edit <proc>            - Edit the file containing function or procedure <proc>
+file                   - Print the name of the current file
+file <filename>        - Change the current file
+func                   - Print the name of the current function
+func <proc>            - Change the current function to function
+                         or procedure <proc>
+list                   - List 10 lines
+list <first>, <last>   - List source lines from <first> to <last>
+list <proc>            - List the source to <proc>
+modules                           - list object files for which debugging
+                                    information is available
+modules select <all|obj> <obj>..  - set or display a selection list
+modules append <obj> <obj>..      - extend a selection list
+pwd                    - Print the current Working Directory
+use                    - Print the directory search path
+use <dir> ...          - Change the directory search path
+/string/               - Search forward for <string> in the current file
+?string?               - Search backward for <string> in the current file
+alias                          - Print the value of all aliases
+alias <newname>                - Print the value of alias <newname>
+alias <newname> "<cmd>"        - Create an alias
+dbxenv                        - Display the dbx changeable variables
+dbxenv case sensitive         - Treat upper and lower case distinctly
+dbxenv case insensitive       - Fold upper and lower case to lower case
+dbxenv makeargs <args>        - Set the arguments passed to make
+dbxenv speed <num>            - Set the speed of tracing execution
+dbxenv stringlen <num>        - Set # of chars printed for `char *'s
+dbxenv euc <on | off>         - Set whether EUC character printing is desired
+dbxenv processcode <on | off> - Set whether process code printing is desired
+debug                  - Print the name and args of the program being debugged
+debug prog [core]      - Begin debugging <prog>
+                         An arbitrary process may be debugged by specifying
+                         its process-id instead of <core>
+detach                 - Detach the debuggee from the debugger
+help                   - Print a summary of all commands
+help <cmd>             - Print help about <cmd>
+kill                   - Kill the debuggee
+make                   - invokes `make' for the program being debugged
+quit                   - Quit, exit dbx
+setenv <name> <string> - Set environment variable <name> to <string>
+sh                     - Get an interactive shell
+sh <shell command>     - Execute a shell command. eg: sh ls -l
+source <filename>      - Execute dbx commands from file <filename>
+button <seltype> <cmd> - Define a software button (dbxtool)
+
+where selection type, <seltype>, is:
+
+  command - Expand to a command from the command subwindow
+  expand  - Expand to longest syntactic identifier
+  ignore  - Ignore the selection
+  lineno  - Lineno from the source subwindow
+  literal - Take the selection literally
+toolenv                   - Display dbxtool's changeable state
+toolenv font <file>       - Set dbxtool's font
+toolenv width <num>       - Set dbxtool's width in characters
+toolenv srclines <num>    - Set num of lines in source subwindow
+toolenv cmdlines <num>    - Set num of lines in command subwindow
+toolenv displines <num>   - Set num of lines in display subwindow
+toolenv topmargin <num>   - Set top margin in source subwindow
+toolenv botmargin <num>   - Set bottom margin in source subwindow
+unbutton <cmd>         - Remove all buttons containing <cmd> (dbxtool)
+unmenu <cmd>           - Remove all menu items containing <cmd> (dbxtool)
+menu <seltype> <cmd>   - Define an item in the buttons menu (dbxtool)
+
+where selection type, <seltype>, is:
+
+  command - Expand to a command from the command subwindow
+  expand  - Expand to longest syntactic identifier
+  ignore  - Ignore the selection
+  lineno  - Lineno from the source subwindow
+  literal - Take the selection literally
+nexti                  - Step one machine instruction (skip OVER calls)
+nexti <n>              - Step <n> machine instructions (skip OVER calls)
+stepi                  - Single step one machine instruction (step INTO calls)
+stepi <n>              - Single step <n> machine instructions (step INTO calls)
+stepi                  - Single step one machine instruction (step INTO calls)
+stepi <n>              - Single step <n> machine instructions (step INTO calls)
+stopi at <addr> [if <cond>] - Stop execution at location <addr>
+stopi <var> [if <cond>]     - Stop execution when value of <var> changes
+                              NOTE: Optional [if <cond>] causes execution to
+                                    stop only if condition <cond> is true
+                                    as appropriate stopping point is reached
+                              eg:   stopi at 0x1017 if i == 5
+stopi if <cond>             - Stop if condition true
+tracei at <addr> [if <cond>]        - Trace execution of location <addr>
+tracei <var> [at <addr>] [if <cond>]- Trace changes to <var> at <addr>
+                                    - NOTE: Optional <if cond> causes tracing
+                                            to be performed only when condition
+                                            <cond> is true as trace point is
+                                            reached
+                                      eg:   tracei 0x1017 if i == 5
+
+     Command Summary
+
+Execution and Tracing
+  catch     clear     cont      delete    ignore    next     rerun
+  run       status    step      stop      trace     when
+
+Displaying and Naming Data
+  assign    call      display   down      dump      print     set
+  set81     undisplay up        whatis    where     whereis   which
+
+Accessing Source Files
+  cd        edit      file      func      list      modules   pwd
+  use       /         ?
+
+Miscellaneous
+  alias     dbxenv    debug     detach    help      kill      make
+  quit      setenv    sh        source
+
+Dbxtool
+  button    toolenv   unbutton  unmenu    menu
+
+Machine Level
+  nexti     stepi     stopi     tracei
+
+The command `help <cmdname>' provides additional
+help for each command

@@ -1,0 +1,5 @@
+#! /bin/csh
+if ($1 =~ PC) then
+        echo "COMPUTER"
+endif
+

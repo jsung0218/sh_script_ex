@@ -1,0 +1,175 @@
+telnet>?
+Commands may be abbreviated.  Commands are:
+
+close   	close current connection
+logout  	forcibly logout remote user and close the connection
+display 	display operating parameters
+mode    	try to enter line or character mode ('mode ?' for more)
+open    	connect to a site
+quit    	exit telnet
+send    	transmit special characters ('send ?' for more)
+set     	set operating parameters ('set ?' for more)
+unset   	unset operating parameters ('unset ?' for more)
+status  	print status information
+toggle  	toggle operating parameters ('toggle ?' for more)
+slc     	change state of special charaters ('slc ?' for more)
+auth    	turn on (off) authentication ('auth ?' for more)
+z       	suspend telnet
+environ 	change environment variables ('environ ?' for more)
+?       	print help information
+
+telnet>mode ?
+format is:  'mode Mode', where 'Mode' is one of:
+character       Disable LINEMODE option
+                (or disable obsolete line-by-line mode)
+line            Enable LINEMODE option
+                (or enable obsolete line-by-line mode)
+                These require the LINEMODE option to be enabled
+isig            Enable signal trapping
+-isig           Disable signal trapping
+edit            Enable character editing
+-edit           Disable character editing
+softtabs        Enable tab expansion
+-softtabs       Disable character editing
+litecho         Enable literal character echo
+-litecho        Disable literal character echo
+?               Print help information
+
+telnet>send ?
+ao              Send Telnet Abort output
+ayt             Send Telnet 'Are You There'
+brk             Send Telnet Break
+ec              Send Telnet Erase Character
+el              Send Telnet Erase Line
+escape          Send current escape character
+ga              Send Telnet 'Go Ahead' sequence
+ip              Send Telnet Interrupt Process
+nop             Send Telnet 'No operation'
+eor             Send Telnet 'End of Record'
+abort           Send Telnet 'Abort Process'
+susp            Send Telnet 'Suspend Process'
+eof             Send Telnet End of File Character
+synch           Perform Telnet 'Synch operation'
+getstatus       Send request for STATUS
+?               Display send options
+
+telnet>set ?
+echo            character to toggle local echoing on/off
+escape          character to escape back to telnet command mode
+rlogin          rlogin escape character
+tracefile       file to write trace information to
+                The following need 'localchars' to be toggled true
+flushoutput     character to cause an Abort Output
+interrupt       character to cause an Interrupt Process
+quit            character to cause an Abort process
+eof             character to cause an EOF 
+                The following are for local editing in linemode
+erase           character to use to erase a character
+kill            character to use to erase a line
+lnext           character to use for literal next
+susp            character to cause a Suspend Process
+reprint         character to use for line reprint
+worderase       character to use to erase a word
+start           character to use for XON
+stop            character to use for XOFF
+forw1           alternate end of line character
+forw2           alternate end of line character
+ayt             alternate AYT character
+autoflush       enable flushing of output when sending interrupt characters
+autosynch       enable automatic sending of interrupt characters in urgent mode
+autologin       enable automatic sending of login and/or authentication info
+authdebug       enable Toggle authentication debugging
+skiprc          enable don't read ~/.telnetrc file
+binary          enable sending and receiving of binary data
+inbinary        enable receiving of binary data
+outbinary       enable sending of binary data
+crlf            enable sending carriage returns as telnet <CR><LF>
+crmod           enable mapping of received carriage returns
+localchars      enable local recognition of certain control characters
+debug           enable debugging
+netdata         enable printing of hexadecimal network data (debugging)
+prettydump      enable output of "netdata" to user readable format (debugging)
+options         enable viewing of options processing (debugging)
+termdata        enable (debugging) toggle printing of hexadecimal terminal data
+?               display help information
+
+telnet>unset ?
+echo            character to toggle local echoing on/off
+escape          character to escape back to telnet command mode
+rlogin          rlogin escape character
+tracefile       file to write trace information to
+                The following need 'localchars' to be toggled true
+flushoutput     character to cause an Abort Output
+interrupt       character to cause an Interrupt Process
+quit            character to cause an Abort process
+eof             character to cause an EOF 
+                The following are for local editing in linemode
+erase           character to use to erase a character
+kill            character to use to erase a line
+lnext           character to use for literal next
+susp            character to cause a Suspend Process
+reprint         character to use for line reprint
+worderase       character to use to erase a word
+start           character to use for XON
+stop            character to use for XOFF
+forw1           alternate end of line character
+forw2           alternate end of line character
+ayt             alternate AYT character
+autoflush       disable flushing of output when sending interrupt characters
+autosynch       disable automatic sending of interrupt characters in urgent mode
+autologin       disable automatic sending of login and/or authentication info
+authdebug       disable Toggle authentication debugging
+skiprc          disable don't read ~/.telnetrc file
+binary          disable sending and receiving of binary data
+inbinary        disable receiving of binary data
+outbinary       disable sending of binary data
+crlf            disable sending carriage returns as telnet <CR><LF>
+crmod           disable mapping of received carriage returns
+localchars      disable local recognition of certain control characters
+debug           disable debugging
+netdata         disable printing of hexadecimal network data (debugging)
+prettydump      disable output of "netdata" to user readable format (debugging)
+options         disable viewing of options processing (debugging)
+termdata        disable (debugging) toggle printing of hexadecimal terminal data
+?               display help information
+
+telnet>toggle ?
+autoflush       toggle flushing of output when sending interrupt characters
+autosynch       toggle automatic sending of interrupt characters in urgent mode
+autologin       toggle automatic sending of login and/or authentication info
+authdebug       toggle Toggle authentication debugging
+skiprc          toggle don't read ~/.telnetrc file
+binary          toggle sending and receiving of binary data
+inbinary        toggle receiving of binary data
+outbinary       toggle sending of binary data
+crlf            toggle sending carriage returns as telnet <CR><LF>
+crmod           toggle mapping of received carriage returns
+localchars      toggle local recognition of certain control characters
+debug           toggle debugging
+netdata         toggle printing of hexadecimal network data (debugging)
+prettydump      toggle output of "netdata" to user readable format (debugging)
+options         toggle viewing of options processing (debugging)
+termdata        toggle (debugging) toggle printing of hexadecimal terminal data
+?               display help information
+
+telnet>slc ?
+export          Use local special character definitions
+import          Use remote special character definitions
+check           Verify remote special character definitions
+?               Print help information
+Special characters are local values
+
+telnet>auth ?
+status          Display current status of authentication information
+disable         Disable an authentication type ('auth disable ?' for more)
+enable          Enable an authentication type ('auth enable ?' for more)
+?               Print help information
+
+telnet>environ ?
+define          Define an environment variable
+undefine        Undefine an environment variable
+export          Mark an environment variable for automatic export
+unexport        Don't mark an environment variable for automatic export
+send            Send an environment variable
+list            List the current environment variables
+?               Print help information

@@ -1,0 +1,18 @@
+#!/bin/sh
+. ./var16.sh
+
+query=`echo "$QUERY_STRING\"" | sed -e "s/&/\";/g" -e "s/=/=\"/g" -e "s/+/ /g" -e "s/%/\\$C_/g" -e "s/C_[0-9a-fA-F][0-9a-fA-F]/\{&\}/g"`
+eval $query
+
+cat - << EOM
+Content-type: text/html
+
+<html><body>
+<pre>
+QUERY_STRING = $QUERY_STRING
+$query
+a = $a
+b = $b
+</pre>
+</body></html>
+EOM

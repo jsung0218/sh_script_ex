@@ -1,0 +1,13 @@
+#! /bin/csh
+     set A=1
+     set B=2
+
+     if ($A == $B) then
+        echo " A is equal to B "
+     else if ($A > $B) then
+        echo " A is greater than B "
+     else if ($A < $B) then
+        echo " A is less than B "
+     endif
+
+

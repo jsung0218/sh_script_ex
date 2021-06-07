@@ -1,0 +1,18 @@
+Commands may be abbreviated.  
+Commands are:
+
+!		debug		mget		pwd		status
+$		dir		mkdir		quit		struct
+account		disconnect	mls		quote		system
+append		form		mode		recv		sunique
+ascii		get		modtime		reget		tenex
+bell		glob		mput		rstatus		trace
+binary		hash		newer		rhelp		type
+bye		help		nmap		rename		user
+case		idle		nlist		reset		umask
+cd		image		ntrans		restart		verbose
+cdup		lcd		open		rmdir		?
+chmod		ls		prompt		runique
+close		macdef		proxy		send
+cr		mdelete		sendport	site
+delete		mdir		put		size

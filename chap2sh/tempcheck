@@ -1,0 +1,8 @@
+#!/bin/sh
+if [ -f temp ] 
+then
+	mv temp temp1
+elif [ -f temp1 ] 
+then
+	mv temp1 temp2
+fi

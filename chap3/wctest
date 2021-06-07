@@ -1,0 +1,23 @@
+lcount1=`wc -l $1 |cut -c1-7`
+lcount2=`wc -l $2 |cut -c1-7`
+wcount1=`wc -w $1 |cut -c1-7`
+wcount2=`wc -w $2 |cut -c1-7`
+ccount1=`wc -c $1 |cut -c1-7`
+ccount2=`wc -c $2 |cut -c1-7`
+zero=0
+ldiff=`expr $lcount1 - $lcount2`
+wdiff=`expr $wcount1 - $wcount2`
+cdiff=`expr $ccount1 - $ccount2`
+if [ $ldiff -ne $zero ]
+then
+        echo "$1 and $2 are different"
+elif [ $wdiff -ne $zero ]
+then
+        echo "$1 and $2 are different"
+elif [ $cdiff -ne $zero ]
+then
+        echo "$1 and $2 are different"
+else
+        echo "$1 and $2 are same"
+fi
+

@@ -1,0 +1,378 @@
+
+B0                              B1
+-----------------------------   -----------------------------
+A1 °¡   B9 °¹   D1 °Ñ   E9 °é   A1 ±¡   B9 ±¹   D1 ±Ñ   E9 ±é
+A2 °¢   BA °º   D2 °Ò   EA °ê   A2 ±¢   BA ±º   D2 ±Ò   EA ±ê
+A3 °£   BB °»   D3 °Ó   EB °ë   A3 ±£   BB ±»   D3 ±Ó   EB ±ë
+A4 °¤   BC °¼   D4 °Ô   EC °ì   A4 ±¤   BC ±¼   D4 ±Ô   EC ±ì
+A5 °¥   BD °½   D5 °Õ   ED °í   A5 ±¥   BD ±½   D5 ±Õ   ED ±í
+A6 °¦   BE °¾   D6 °Ö   EE °î   A6 ±¦   BE ±¾   D6 ±Ö   EE ±î
+A7 °§   BF °¿   D7 °×   EF °ï   A7 ±§   BF ±¿   D7 ±×   EF ±ï
+A8 °¨   C0 °À   D8 °Ø   F0 °ð   A8 ±¨   C0 ±À   D8 ±Ø   F0 ±ð
+A9 °©   C1 °Á   D9 °Ù   F1 °ñ   A9 ±©   C1 ±Á   D9 ±Ù   F1 ±ñ
+AA °ª   C2 °Â   DA °Ú   F2 °ò   AA ±ª   C2 ±Â   DA ±Ú   F2 ±ò
+AB °«   C3 °Ã   DB °Û   F3 °ó   AB ±«   C3 ±Ã   DB ±Û   F3 ±ó
+AC °¬   C4 °Ä   DC °Ü   F4 °ô   AC ±¬   C4 ±Ä   DC ±Ü   F4 ±ô
+AD °­   C5 °Å   DD °Ý   F5 °õ   AD ±­   C5 ±Å   DD ±Ý   F5 ±õ
+AE °®   C6 °Æ   DE °Þ   F6 °ö   AE ±®   C6 ±Æ   DE ±Þ   F6 ±ö
+AF °¯   C7 °Ç   DF °ß   F7 °÷   AF ±¯   C7 ±Ç   DF ±ß   F7 ±÷
+B0 °°   C8 °È   E0 °à   F8 °ø   B0 ±°   C8 ±È   E0 ±à   F8 ±ø
+B1 °±   C9 °É   E1 °á   F9 °ù   B1 ±±   C9 ±É   E1 ±á   F9 ±ù
+B2 °²   CA °Ê   E2 °â   FA °ú   B2 ±²   CA ±Ê   E2 ±â   FA ±ú
+B3 °³   CB °Ë   E3 °ã   FB °û   B3 ±³   CB ±Ë   E3 ±ã   FB ±û
+B4 °´   CC °Ì   E4 °ä   FC °ü   B4 ±´   CC ±Ì   E4 ±ä   FC ±ü
+B5 °µ   CD °Í   E5 °å   FD °ý   B5 ±µ   CD ±Í   E5 ±å   FD ±ý
+B6 °¶   CE °Î   E6 °æ   FE °þ   B6 ±¶   CE ±Î   E6 ±æ   FE ±þ
+B7 °·   CF °Ï   E7 °ç           B7 ±·   CF ±Ï   E7 ±ç
+B8 °¸   D0 °Ð   E8 °è           B8 ±¸   D0 ±Ð   E8 ±è
+
+B2                              B3
+-----------------------------   -----------------------------
+A1 ²¡   B9 ²¹   D1 ²Ñ   E9 ²é   A1 ³¡   B9 ³¹   D1 ³Ñ   E9 ³é
+A2 ²¢   BA ²º   D2 ²Ò   EA ²ê   A2 ³¢   BA ³º   D2 ³Ò   EA ³ê
+A3 ²£   BB ²»   D3 ²Ó   EB ²ë   A3 ³£   BB ³»   D3 ³Ó   EB ³ë
+A4 ²¤   BC ²¼   D4 ²Ô   EC ²ì   A4 ³¤   BC ³¼   D4 ³Ô   EC ³ì
+A5 ²¥   BD ²½   D5 ²Õ   ED ²í   A5 ³¥   BD ³½   D5 ³Õ   ED ³í
+A6 ²¦   BE ²¾   D6 ²Ö   EE ²î   A6 ³¦   BE ³¾   D6 ³Ö   EE ³î
+A7 ²§   BF ²¿   D7 ²×   EF ²ï   A7 ³§   BF ³¿   D7 ³×   EF ³ï
+A8 ²¨   C0 ²À   D8 ²Ø   F0 ²ð   A8 ³¨   C0 ³À   D8 ³Ø   F0 ³ð
+A9 ²©   C1 ²Á   D9 ²Ù   F1 ²ñ   A9 ³©   C1 ³Á   D9 ³Ù   F1 ³ñ
+AA ²ª   C2 ²Â   DA ²Ú   F2 ²ò   AA ³ª   C2 ³Â   DA ³Ú   F2 ³ò
+AB ²«   C3 ²Ã   DB ²Û   F3 ²ó   AB ³«   C3 ³Ã   DB ³Û   F3 ³ó
+AC ²¬   C4 ²Ä   DC ²Ü   F4 ²ô   AC ³¬   C4 ³Ä   DC ³Ü   F4 ³ô
+AD ²­   C5 ²Å   DD ²Ý   F5 ²õ   AD ³­   C5 ³Å   DD ³Ý   F5 ³õ
+AE ²®   C6 ²Æ   DE ²Þ   F6 ²ö   AE ³®   C6 ³Æ   DE ³Þ   F6 ³ö
+AF ²¯   C7 ²Ç   DF ²ß   F7 ²÷   AF ³¯   C7 ³Ç   DF ³ß   F7 ³÷
+B0 ²°   C8 ²È   E0 ²à   F8 ²ø   B0 ³°   C8 ³È   E0 ³à   F8 ³ø
+B1 ²±   C9 ²É   E1 ²á   F9 ²ù   B1 ³±   C9 ³É   E1 ³á   F9 ³ù
+B2 ²²   CA ²Ê   E2 ²â   FA ²ú   B2 ³²   CA ³Ê   E2 ³â   FA ³ú
+B3 ²³   CB ²Ë   E3 ²ã   FB ²û   B3 ³³   CB ³Ë   E3 ³ã   FB ³û
+B4 ²´   CC ²Ì   E4 ²ä   FC ²ü   B4 ³´   CC ³Ì   E4 ³ä   FC ³ü
+B5 ²µ   CD ²Í   E5 ²å   FD ²ý   B5 ³µ   CD ³Í   E5 ³å   FD ³ý
+B6 ²¶   CE ²Î   E6 ²æ   FE ²þ   B6 ³¶   CE ³Î   E6 ³æ   FE ³þ
+B7 ²·   CF ²Ï   E7 ²ç           B7 ³·   CF ³Ï   E7 ³ç
+B8 ²¸   D0 ²Ð   E8 ²è           B8 ³¸   D0 ³Ð   E8 ³è
+
+B4                              B5
+-----------------------------   -----------------------------
+A1 ´¡   B9 ´¹   D1 ´Ñ   E9 ´é   A1 µ¡   B9 µ¹   D1 µÑ   E9 µé
+A2 ´¢   BA ´º   D2 ´Ò   EA ´ê   A2 µ¢   BA µº   D2 µÒ   EA µê
+A3 ´£   BB ´»   D3 ´Ó   EB ´ë   A3 µ£   BB µ»   D3 µÓ   EB µë
+A4 ´¤   BC ´¼   D4 ´Ô   EC ´ì   A4 µ¤   BC µ¼   D4 µÔ   EC µì
+A5 ´¥   BD ´½   D5 ´Õ   ED ´í   A5 µ¥   BD µ½   D5 µÕ   ED µí
+A6 ´¦   BE ´¾   D6 ´Ö   EE ´î   A6 µ¦   BE µ¾   D6 µÖ   EE µî
+A7 ´§   BF ´¿   D7 ´×   EF ´ï   A7 µ§   BF µ¿   D7 µ×   EF µï
+A8 ´¨   C0 ´À   D8 ´Ø   F0 ´ð   A8 µ¨   C0 µÀ   D8 µØ   F0 µð
+A9 ´©   C1 ´Á   D9 ´Ù   F1 ´ñ   A9 µ©   C1 µÁ   D9 µÙ   F1 µñ
+AA ´ª   C2 ´Â   DA ´Ú   F2 ´ò   AA µª   C2 µÂ   DA µÚ   F2 µò
+AB ´«   C3 ´Ã   DB ´Û   F3 ´ó   AB µ«   C3 µÃ   DB µÛ   F3 µó
+AC ´¬   C4 ´Ä   DC ´Ü   F4 ´ô   AC µ¬   C4 µÄ   DC µÜ   F4 µô
+AD ´­   C5 ´Å   DD ´Ý   F5 ´õ   AD µ­   C5 µÅ   DD µÝ   F5 µõ
+AE ´®   C6 ´Æ   DE ´Þ   F6 ´ö   AE µ®   C6 µÆ   DE µÞ   F6 µö
+AF ´¯   C7 ´Ç   DF ´ß   F7 ´÷   AF µ¯   C7 µÇ   DF µß   F7 µ÷
+B0 ´°   C8 ´È   E0 ´à   F8 ´ø   B0 µ°   C8 µÈ   E0 µà   F8 µø
+B1 ´±   C9 ´É   E1 ´á   F9 ´ù   B1 µ±   C9 µÉ   E1 µá   F9 µù
+B2 ´²   CA ´Ê   E2 ´â   FA ´ú   B2 µ²   CA µÊ   E2 µâ   FA µú
+B3 ´³   CB ´Ë   E3 ´ã   FB ´û   B3 µ³   CB µË   E3 µã   FB µû
+B4 ´´   CC ´Ì   E4 ´ä   FC ´ü   B4 µ´   CC µÌ   E4 µä   FC µü
+B5 ´µ   CD ´Í   E5 ´å   FD ´ý   B5 µµ   CD µÍ   E5 µå   FD µý
+B6 ´¶   CE ´Î   E6 ´æ   FE ´þ   B6 µ¶   CE µÎ   E6 µæ   FE µþ
+B7 ´·   CF ´Ï   E7 ´ç           B7 µ·   CF µÏ   E7 µç
+B8 ´¸   D0 ´Ð   E8 ´è           B8 µ¸   D0 µÐ   E8 µè
+
+B6                              B7
+-----------------------------   -----------------------------
+A1 ¶¡   B9 ¶¹   D1 ¶Ñ   E9 ¶é   A1 ·¡   B9 ·¹   D1 ·Ñ   E9 ·é
+A2 ¶¢   BA ¶º   D2 ¶Ò   EA ¶ê   A2 ·¢   BA ·º   D2 ·Ò   EA ·ê
+A3 ¶£   BB ¶»   D3 ¶Ó   EB ¶ë   A3 ·£   BB ·»   D3 ·Ó   EB ·ë
+A4 ¶¤   BC ¶¼   D4 ¶Ô   EC ¶ì   A4 ·¤   BC ·¼   D4 ·Ô   EC ·ì
+A5 ¶¥   BD ¶½   D5 ¶Õ   ED ¶í   A5 ·¥   BD ·½   D5 ·Õ   ED ·í
+A6 ¶¦   BE ¶¾   D6 ¶Ö   EE ¶î   A6 ·¦   BE ·¾   D6 ·Ö   EE ·î
+A7 ¶§   BF ¶¿   D7 ¶×   EF ¶ï   A7 ·§   BF ·¿   D7 ·×   EF ·ï
+A8 ¶¨   C0 ¶À   D8 ¶Ø   F0 ¶ð   A8 ·¨   C0 ·À   D8 ·Ø   F0 ·ð
+A9 ¶©   C1 ¶Á   D9 ¶Ù   F1 ¶ñ   A9 ·©   C1 ·Á   D9 ·Ù   F1 ·ñ
+AA ¶ª   C2 ¶Â   DA ¶Ú   F2 ¶ò   AA ·ª   C2 ·Â   DA ·Ú   F2 ·ò
+AB ¶«   C3 ¶Ã   DB ¶Û   F3 ¶ó   AB ·«   C3 ·Ã   DB ·Û   F3 ·ó
+AC ¶¬   C4 ¶Ä   DC ¶Ü   F4 ¶ô   AC ·¬   C4 ·Ä   DC ·Ü   F4 ·ô
+AD ¶­   C5 ¶Å   DD ¶Ý   F5 ¶õ   AD ·­   C5 ·Å   DD ·Ý   F5 ·õ
+AE ¶®   C6 ¶Æ   DE ¶Þ   F6 ¶ö   AE ·®   C6 ·Æ   DE ·Þ   F6 ·ö
+AF ¶¯   C7 ¶Ç   DF ¶ß   F7 ¶÷   AF ·¯   C7 ·Ç   DF ·ß   F7 ·÷
+B0 ¶°   C8 ¶È   E0 ¶à   F8 ¶ø   B0 ·°   C8 ·È   E0 ·à   F8 ·ø
+B1 ¶±   C9 ¶É   E1 ¶á   F9 ¶ù   B1 ·±   C9 ·É   E1 ·á   F9 ·ù
+B2 ¶²   CA ¶Ê   E2 ¶â   FA ¶ú   B2 ·²   CA ·Ê   E2 ·â   FA ·ú
+B3 ¶³   CB ¶Ë   E3 ¶ã   FB ¶û   B3 ·³   CB ·Ë   E3 ·ã   FB ·û
+B4 ¶´   CC ¶Ì   E4 ¶ä   FC ¶ü   B4 ·´   CC ·Ì   E4 ·ä   FC ·ü
+B5 ¶µ   CD ¶Í   E5 ¶å   FD ¶ý   B5 ·µ   CD ·Í   E5 ·å   FD ·ý
+B6 ¶¶   CE ¶Î   E6 ¶æ   FE ¶þ   B6 ·¶   CE ·Î   E6 ·æ   FE ·þ
+B7 ¶·   CF ¶Ï   E7 ¶ç           B7 ··   CF ·Ï   E7 ·ç
+B8 ¶¸   D0 ¶Ð   E8 ¶è           B8 ·¸   D0 ·Ð   E8 ·è
+
+B8                              B9
+-----------------------------   -----------------------------
+A1 ¸¡   B9 ¸¹   D1 ¸Ñ   E9 ¸é   A1 ¹¡   B9 ¹¹   D1 ¹Ñ   E9 ¹é
+A2 ¸¢   BA ¸º   D2 ¸Ò   EA ¸ê   A2 ¹¢   BA ¹º   D2 ¹Ò   EA ¹ê
+A3 ¸£   BB ¸»   D3 ¸Ó   EB ¸ë   A3 ¹£   BB ¹»   D3 ¹Ó   EB ¹ë
+A4 ¸¤   BC ¸¼   D4 ¸Ô   EC ¸ì   A4 ¹¤   BC ¹¼   D4 ¹Ô   EC ¹ì
+A5 ¸¥   BD ¸½   D5 ¸Õ   ED ¸í   A5 ¹¥   BD ¹½   D5 ¹Õ   ED ¹í
+A6 ¸¦   BE ¸¾   D6 ¸Ö   EE ¸î   A6 ¹¦   BE ¹¾   D6 ¹Ö   EE ¹î
+A7 ¸§   BF ¸¿   D7 ¸×   EF ¸ï   A7 ¹§   BF ¹¿   D7 ¹×   EF ¹ï
+A8 ¸¨   C0 ¸À   D8 ¸Ø   F0 ¸ð   A8 ¹¨   C0 ¹À   D8 ¹Ø   F0 ¹ð
+A9 ¸©   C1 ¸Á   D9 ¸Ù   F1 ¸ñ   A9 ¹©   C1 ¹Á   D9 ¹Ù   F1 ¹ñ
+AA ¸ª   C2 ¸Â   DA ¸Ú   F2 ¸ò   AA ¹ª   C2 ¹Â   DA ¹Ú   F2 ¹ò
+AB ¸«   C3 ¸Ã   DB ¸Û   F3 ¸ó   AB ¹«   C3 ¹Ã   DB ¹Û   F3 ¹ó
+AC ¸¬   C4 ¸Ä   DC ¸Ü   F4 ¸ô   AC ¹¬   C4 ¹Ä   DC ¹Ü   F4 ¹ô
+AD ¸­   C5 ¸Å   DD ¸Ý   F5 ¸õ   AD ¹­   C5 ¹Å   DD ¹Ý   F5 ¹õ
+AE ¸®   C6 ¸Æ   DE ¸Þ   F6 ¸ö   AE ¹®   C6 ¹Æ   DE ¹Þ   F6 ¹ö
+AF ¸¯   C7 ¸Ç   DF ¸ß   F7 ¸÷   AF ¹¯   C7 ¹Ç   DF ¹ß   F7 ¹÷
+B0 ¸°   C8 ¸È   E0 ¸à   F8 ¸ø   B0 ¹°   C8 ¹È   E0 ¹à   F8 ¹ø
+B1 ¸±   C9 ¸É   E1 ¸á   F9 ¸ù   B1 ¹±   C9 ¹É   E1 ¹á   F9 ¹ù
+B2 ¸²   CA ¸Ê   E2 ¸â   FA ¸ú   B2 ¹²   CA ¹Ê   E2 ¹â   FA ¹ú
+B3 ¸³   CB ¸Ë   E3 ¸ã   FB ¸û   B3 ¹³   CB ¹Ë   E3 ¹ã   FB ¹û
+B4 ¸´   CC ¸Ì   E4 ¸ä   FC ¸ü   B4 ¹´   CC ¹Ì   E4 ¹ä   FC ¹ü
+B5 ¸µ   CD ¸Í   E5 ¸å   FD ¸ý   B5 ¹µ   CD ¹Í   E5 ¹å   FD ¹ý
+B6 ¸¶   CE ¸Î   E6 ¸æ   FE ¸þ   B6 ¹¶   CE ¹Î   E6 ¹æ   FE ¹þ
+B7 ¸·   CF ¸Ï   E7 ¸ç           B7 ¹·   CF ¹Ï   E7 ¹ç
+B8 ¸¸   D0 ¸Ð   E8 ¸è           B8 ¹¸   D0 ¹Ð   E8 ¹è
+
+BA                              BB
+-----------------------------   -----------------------------
+A1 º¡   B9 º¹   D1 ºÑ   E9 ºé   A1 »¡   B9 »¹   D1 »Ñ   E9 »é
+A2 º¢   BA ºº   D2 ºÒ   EA ºê   A2 »¢   BA »º   D2 »Ò   EA »ê
+A3 º£   BB º»   D3 ºÓ   EB ºë   A3 »£   BB »»   D3 »Ó   EB »ë
+A4 º¤   BC º¼   D4 ºÔ   EC ºì   A4 »¤   BC »¼   D4 »Ô   EC »ì
+A5 º¥   BD º½   D5 ºÕ   ED ºí   A5 »¥   BD »½   D5 »Õ   ED »í
+A6 º¦   BE º¾   D6 ºÖ   EE ºî   A6 »¦   BE »¾   D6 »Ö   EE »î
+A7 º§   BF º¿   D7 º×   EF ºï   A7 »§   BF »¿   D7 »×   EF »ï
+A8 º¨   C0 ºÀ   D8 ºØ   F0 ºð   A8 »¨   C0 »À   D8 »Ø   F0 »ð
+A9 º©   C1 ºÁ   D9 ºÙ   F1 ºñ   A9 »©   C1 »Á   D9 »Ù   F1 »ñ
+AA ºª   C2 ºÂ   DA ºÚ   F2 ºò   AA »ª   C2 »Â   DA »Ú   F2 »ò
+AB º«   C3 ºÃ   DB ºÛ   F3 ºó   AB »«   C3 »Ã   DB »Û   F3 »ó
+AC º¬   C4 ºÄ   DC ºÜ   F4 ºô   AC »¬   C4 »Ä   DC »Ü   F4 »ô
+AD º­   C5 ºÅ   DD ºÝ   F5 ºõ   AD »­   C5 »Å   DD »Ý   F5 »õ
+AE º®   C6 ºÆ   DE ºÞ   F6 ºö   AE »®   C6 »Æ   DE »Þ   F6 »ö
+AF º¯   C7 ºÇ   DF ºß   F7 º÷   AF »¯   C7 »Ç   DF »ß   F7 »÷
+B0 º°   C8 ºÈ   E0 ºà   F8 ºø   B0 »°   C8 »È   E0 »à   F8 »ø
+B1 º±   C9 ºÉ   E1 ºá   F9 ºù   B1 »±   C9 »É   E1 »á   F9 »ù
+B2 º²   CA ºÊ   E2 ºâ   FA ºú   B2 »²   CA »Ê   E2 »â   FA »ú
+B3 º³   CB ºË   E3 ºã   FB ºû   B3 »³   CB »Ë   E3 »ã   FB »û
+B4 º´   CC ºÌ   E4 ºä   FC ºü   B4 »´   CC »Ì   E4 »ä   FC »ü
+B5 ºµ   CD ºÍ   E5 ºå   FD ºý   B5 »µ   CD »Í   E5 »å   FD »ý
+B6 º¶   CE ºÎ   E6 ºæ   FE ºþ   B6 »¶   CE »Î   E6 »æ   FE »þ
+B7 º·   CF ºÏ   E7 ºç           B7 »·   CF »Ï   E7 »ç
+B8 º¸   D0 ºÐ   E8 ºè           B8 »¸   D0 »Ð   E8 »è
+
+BC                              BD
+-----------------------------   -----------------------------
+A1 ¼¡   B9 ¼¹   D1 ¼Ñ   E9 ¼é   A1 ½¡   B9 ½¹   D1 ½Ñ   E9 ½é
+A2 ¼¢   BA ¼º   D2 ¼Ò   EA ¼ê   A2 ½¢   BA ½º   D2 ½Ò   EA ½ê
+A3 ¼£   BB ¼»   D3 ¼Ó   EB ¼ë   A3 ½£   BB ½»   D3 ½Ó   EB ½ë
+A4 ¼¤   BC ¼¼   D4 ¼Ô   EC ¼ì   A4 ½¤   BC ½¼   D4 ½Ô   EC ½ì
+A5 ¼¥   BD ¼½   D5 ¼Õ   ED ¼í   A5 ½¥   BD ½½   D5 ½Õ   ED ½í
+A6 ¼¦   BE ¼¾   D6 ¼Ö   EE ¼î   A6 ½¦   BE ½¾   D6 ½Ö   EE ½î
+A7 ¼§   BF ¼¿   D7 ¼×   EF ¼ï   A7 ½§   BF ½¿   D7 ½×   EF ½ï
+A8 ¼¨   C0 ¼À   D8 ¼Ø   F0 ¼ð   A8 ½¨   C0 ½À   D8 ½Ø   F0 ½ð
+A9 ¼©   C1 ¼Á   D9 ¼Ù   F1 ¼ñ   A9 ½©   C1 ½Á   D9 ½Ù   F1 ½ñ
+AA ¼ª   C2 ¼Â   DA ¼Ú   F2 ¼ò   AA ½ª   C2 ½Â   DA ½Ú   F2 ½ò
+AB ¼«   C3 ¼Ã   DB ¼Û   F3 ¼ó   AB ½«   C3 ½Ã   DB ½Û   F3 ½ó
+AC ¼¬   C4 ¼Ä   DC ¼Ü   F4 ¼ô   AC ½¬   C4 ½Ä   DC ½Ü   F4 ½ô
+AD ¼­   C5 ¼Å   DD ¼Ý   F5 ¼õ   AD ½­   C5 ½Å   DD ½Ý   F5 ½õ
+AE ¼®   C6 ¼Æ   DE ¼Þ   F6 ¼ö   AE ½®   C6 ½Æ   DE ½Þ   F6 ½ö
+AF ¼¯   C7 ¼Ç   DF ¼ß   F7 ¼÷   AF ½¯   C7 ½Ç   DF ½ß   F7 ½÷
+B0 ¼°   C8 ¼È   E0 ¼à   F8 ¼ø   B0 ½°   C8 ½È   E0 ½à   F8 ½ø
+B1 ¼±   C9 ¼É   E1 ¼á   F9 ¼ù   B1 ½±   C9 ½É   E1 ½á   F9 ½ù
+B2 ¼²   CA ¼Ê   E2 ¼â   FA ¼ú   B2 ½²   CA ½Ê   E2 ½â   FA ½ú
+B3 ¼³   CB ¼Ë   E3 ¼ã   FB ¼û   B3 ½³   CB ½Ë   E3 ½ã   FB ½û
+B4 ¼´   CC ¼Ì   E4 ¼ä   FC ¼ü   B4 ½´   CC ½Ì   E4 ½ä   FC ½ü
+B5 ¼µ   CD ¼Í   E5 ¼å   FD ¼ý   B5 ½µ   CD ½Í   E5 ½å   FD ½ý
+B6 ¼¶   CE ¼Î   E6 ¼æ   FE ¼þ   B6 ½¶   CE ½Î   E6 ½æ   FE ½þ
+B7 ¼·   CF ¼Ï   E7 ¼ç           B7 ½·   CF ½Ï   E7 ½ç
+B8 ¼¸   D0 ¼Ð   E8 ¼è           B8 ½¸   D0 ½Ð   E8 ½è
+
+BE                              BF
+-----------------------------   -----------------------------
+A1 ¾¡   B9 ¾¹   D1 ¾Ñ   E9 ¾é   A1 ¿¡   B9 ¿¹   D1 ¿Ñ   E9 ¿é
+A2 ¾¢   BA ¾º   D2 ¾Ò   EA ¾ê   A2 ¿¢   BA ¿º   D2 ¿Ò   EA ¿ê
+A3 ¾£   BB ¾»   D3 ¾Ó   EB ¾ë   A3 ¿£   BB ¿»   D3 ¿Ó   EB ¿ë
+A4 ¾¤   BC ¾¼   D4 ¾Ô   EC ¾ì   A4 ¿¤   BC ¿¼   D4 ¿Ô   EC ¿ì
+A5 ¾¥   BD ¾½   D5 ¾Õ   ED ¾í   A5 ¿¥   BD ¿½   D5 ¿Õ   ED ¿í
+A6 ¾¦   BE ¾¾   D6 ¾Ö   EE ¾î   A6 ¿¦   BE ¿¾   D6 ¿Ö   EE ¿î
+A7 ¾§   BF ¾¿   D7 ¾×   EF ¾ï   A7 ¿§   BF ¿¿   D7 ¿×   EF ¿ï
+A8 ¾¨   C0 ¾À   D8 ¾Ø   F0 ¾ð   A8 ¿¨   C0 ¿À   D8 ¿Ø   F0 ¿ð
+A9 ¾©   C1 ¾Á   D9 ¾Ù   F1 ¾ñ   A9 ¿©   C1 ¿Á   D9 ¿Ù   F1 ¿ñ
+AA ¾ª   C2 ¾Â   DA ¾Ú   F2 ¾ò   AA ¿ª   C2 ¿Â   DA ¿Ú   F2 ¿ò
+AB ¾«   C3 ¾Ã   DB ¾Û   F3 ¾ó   AB ¿«   C3 ¿Ã   DB ¿Û   F3 ¿ó
+AC ¾¬   C4 ¾Ä   DC ¾Ü   F4 ¾ô   AC ¿¬   C4 ¿Ä   DC ¿Ü   F4 ¿ô
+AD ¾­   C5 ¾Å   DD ¾Ý   F5 ¾õ   AD ¿­   C5 ¿Å   DD ¿Ý   F5 ¿õ
+AE ¾®   C6 ¾Æ   DE ¾Þ   F6 ¾ö   AE ¿®   C6 ¿Æ   DE ¿Þ   F6 ¿ö
+AF ¾¯   C7 ¾Ç   DF ¾ß   F7 ¾÷   AF ¿¯   C7 ¿Ç   DF ¿ß   F7 ¿÷
+B0 ¾°   C8 ¾È   E0 ¾à   F8 ¾ø   B0 ¿°   C8 ¿È   E0 ¿à   F8 ¿ø
+B1 ¾±   C9 ¾É   E1 ¾á   F9 ¾ù   B1 ¿±   C9 ¿É   E1 ¿á   F9 ¿ù
+B2 ¾²   CA ¾Ê   E2 ¾â   FA ¾ú   B2 ¿²   CA ¿Ê   E2 ¿â   FA ¿ú
+B3 ¾³   CB ¾Ë   E3 ¾ã   FB ¾û   B3 ¿³   CB ¿Ë   E3 ¿ã   FB ¿û
+B4 ¾´   CC ¾Ì   E4 ¾ä   FC ¾ü   B4 ¿´   CC ¿Ì   E4 ¿ä   FC ¿ü
+B5 ¾µ   CD ¾Í   E5 ¾å   FD ¾ý   B5 ¿µ   CD ¿Í   E5 ¿å   FD ¿ý
+B6 ¾¶   CE ¾Î   E6 ¾æ   FE ¾þ   B6 ¿¶   CE ¿Î   E6 ¿æ   FE ¿þ
+B7 ¾·   CF ¾Ï   E7 ¾ç           B7 ¿·   CF ¿Ï   E7 ¿ç
+B8 ¾¸   D0 ¾Ð   E8 ¾è           B8 ¿¸   D0 ¿Ð   E8 ¿è
+
+C0                              C1
+-----------------------------   -----------------------------
+A1 À¡   B9 À¹   D1 ÀÑ   E9 Àé   A1 Á¡   B9 Á¹   D1 ÁÑ   E9 Áé
+A2 À¢   BA Àº   D2 ÀÒ   EA Àê   A2 Á¢   BA Áº   D2 ÁÒ   EA Áê
+A3 À£   BB À»   D3 ÀÓ   EB Àë   A3 Á£   BB Á»   D3 ÁÓ   EB Áë
+A4 À¤   BC À¼   D4 ÀÔ   EC Àì   A4 Á¤   BC Á¼   D4 ÁÔ   EC Áì
+A5 À¥   BD À½   D5 ÀÕ   ED Àí   A5 Á¥   BD Á½   D5 ÁÕ   ED Áí
+A6 À¦   BE À¾   D6 ÀÖ   EE Àî   A6 Á¦   BE Á¾   D6 ÁÖ   EE Áî
+A7 À§   BF À¿   D7 À×   EF Àï   A7 Á§   BF Á¿   D7 Á×   EF Áï
+A8 À¨   C0 ÀÀ   D8 ÀØ   F0 Àð   A8 Á¨   C0 ÁÀ   D8 ÁØ   F0 Áð
+A9 À©   C1 ÀÁ   D9 ÀÙ   F1 Àñ   A9 Á©   C1 ÁÁ   D9 ÁÙ   F1 Áñ
+AA Àª   C2 ÀÂ   DA ÀÚ   F2 Àò   AA Áª   C2 ÁÂ   DA ÁÚ   F2 Áò
+AB À«   C3 ÀÃ   DB ÀÛ   F3 Àó   AB Á«   C3 ÁÃ   DB ÁÛ   F3 Áó
+AC À¬   C4 ÀÄ   DC ÀÜ   F4 Àô   AC Á¬   C4 ÁÄ   DC ÁÜ   F4 Áô
+AD À­   C5 ÀÅ   DD ÀÝ   F5 Àõ   AD Á­   C5 ÁÅ   DD ÁÝ   F5 Áõ
+AE À®   C6 ÀÆ   DE ÀÞ   F6 Àö   AE Á®   C6 ÁÆ   DE ÁÞ   F6 Áö
+AF À¯   C7 ÀÇ   DF Àß   F7 À÷   AF Á¯   C7 ÁÇ   DF Áß   F7 Á÷
+B0 À°   C8 ÀÈ   E0 Àà   F8 Àø   B0 Á°   C8 ÁÈ   E0 Áà   F8 Áø
+B1 À±   C9 ÀÉ   E1 Àá   F9 Àù   B1 Á±   C9 ÁÉ   E1 Áá   F9 Áù
+B2 À²   CA ÀÊ   E2 Àâ   FA Àú   B2 Á²   CA ÁÊ   E2 Áâ   FA Áú
+B3 À³   CB ÀË   E3 Àã   FB Àû   B3 Á³   CB ÁË   E3 Áã   FB Áû
+B4 À´   CC ÀÌ   E4 Àä   FC Àü   B4 Á´   CC ÁÌ   E4 Áä   FC Áü
+B5 Àµ   CD ÀÍ   E5 Àå   FD Àý   B5 Áµ   CD ÁÍ   E5 Áå   FD Áý
+B6 À¶   CE ÀÎ   E6 Àæ   FE Àþ   B6 Á¶   CE ÁÎ   E6 Áæ   FE Áþ
+B7 À·   CF ÀÏ   E7 Àç           B7 Á·   CF ÁÏ   E7 Áç
+B8 À¸   D0 ÀÐ   E8 Àè           B8 Á¸   D0 ÁÐ   E8 Áè
+
+C2                              C3
+-----------------------------   -----------------------------
+A1 Â¡   B9 Â¹   D1 ÂÑ   E9 Âé   A1 Ã¡   B9 Ã¹   D1 ÃÑ   E9 Ãé
+A2 Â¢   BA Âº   D2 ÂÒ   EA Âê   A2 Ã¢   BA Ãº   D2 ÃÒ   EA Ãê
+A3 Â£   BB Â»   D3 ÂÓ   EB Âë   A3 Ã£   BB Ã»   D3 ÃÓ   EB Ãë
+A4 Â¤   BC Â¼   D4 ÂÔ   EC Âì   A4 Ã¤   BC Ã¼   D4 ÃÔ   EC Ãì
+A5 Â¥   BD Â½   D5 ÂÕ   ED Âí   A5 Ã¥   BD Ã½   D5 ÃÕ   ED Ãí
+A6 Â¦   BE Â¾   D6 ÂÖ   EE Âî   A6 Ã¦   BE Ã¾   D6 ÃÖ   EE Ãî
+A7 Â§   BF Â¿   D7 Â×   EF Âï   A7 Ã§   BF Ã¿   D7 Ã×   EF Ãï
+A8 Â¨   C0 ÂÀ   D8 ÂØ   F0 Âð   A8 Ã¨   C0 ÃÀ   D8 ÃØ   F0 Ãð
+A9 Â©   C1 ÂÁ   D9 ÂÙ   F1 Âñ   A9 Ã©   C1 ÃÁ   D9 ÃÙ   F1 Ãñ
+AA Âª   C2 ÂÂ   DA ÂÚ   F2 Âò   AA Ãª   C2 ÃÂ   DA ÃÚ   F2 Ãò
+AB Â«   C3 ÂÃ   DB ÂÛ   F3 Âó   AB Ã«   C3 ÃÃ   DB ÃÛ   F3 Ãó
+AC Â¬   C4 ÂÄ   DC ÂÜ   F4 Âô   AC Ã¬   C4 ÃÄ   DC ÃÜ   F4 Ãô
+AD Â­   C5 ÂÅ   DD ÂÝ   F5 Âõ   AD Ã­   C5 ÃÅ   DD ÃÝ   F5 Ãõ
+AE Â®   C6 ÂÆ   DE ÂÞ   F6 Âö   AE Ã®   C6 ÃÆ   DE ÃÞ   F6 Ãö
+AF Â¯   C7 ÂÇ   DF Âß   F7 Â÷   AF Ã¯   C7 ÃÇ   DF Ãß   F7 Ã÷
+B0 Â°   C8 ÂÈ   E0 Âà   F8 Âø   B0 Ã°   C8 ÃÈ   E0 Ãà   F8 Ãø
+B1 Â±   C9 ÂÉ   E1 Âá   F9 Âù   B1 Ã±   C9 ÃÉ   E1 Ãá   F9 Ãù
+B2 Â²   CA ÂÊ   E2 Ââ   FA Âú   B2 Ã²   CA ÃÊ   E2 Ãâ   FA Ãú
+B3 Â³   CB ÂË   E3 Âã   FB Âû   B3 Ã³   CB ÃË   E3 Ãã   FB Ãû
+B4 Â´   CC ÂÌ   E4 Âä   FC Âü   B4 Ã´   CC ÃÌ   E4 Ãä   FC Ãü
+B5 Âµ   CD ÂÍ   E5 Âå   FD Âý   B5 Ãµ   CD ÃÍ   E5 Ãå   FD Ãý
+B6 Â¶   CE ÂÎ   E6 Âæ   FE Âþ   B6 Ã¶   CE ÃÎ   E6 Ãæ   FE Ãþ
+B7 Â·   CF ÂÏ   E7 Âç           B7 Ã·   CF ÃÏ   E7 Ãç
+B8 Â¸   D0 ÂÐ   E8 Âè           B8 Ã¸   D0 ÃÐ   E8 Ãè
+
+C4                              C5
+-----------------------------   -----------------------------
+A1 Ä¡   B9 Ä¹   D1 ÄÑ   E9 Äé   A1 Å¡   B9 Å¹   D1 ÅÑ   E9 Åé
+A2 Ä¢   BA Äº   D2 ÄÒ   EA Äê   A2 Å¢   BA Åº   D2 ÅÒ   EA Åê
+A3 Ä£   BB Ä»   D3 ÄÓ   EB Äë   A3 Å£   BB Å»   D3 ÅÓ   EB Åë
+A4 Ä¤   BC Ä¼   D4 ÄÔ   EC Äì   A4 Å¤   BC Å¼   D4 ÅÔ   EC Åì
+A5 Ä¥   BD Ä½   D5 ÄÕ   ED Äí   A5 Å¥   BD Å½   D5 ÅÕ   ED Åí
+A6 Ä¦   BE Ä¾   D6 ÄÖ   EE Äî   A6 Å¦   BE Å¾   D6 ÅÖ   EE Åî
+A7 Ä§   BF Ä¿   D7 Ä×   EF Äï   A7 Å§   BF Å¿   D7 Å×   EF Åï
+A8 Ä¨   C0 ÄÀ   D8 ÄØ   F0 Äð   A8 Å¨   C0 ÅÀ   D8 ÅØ   F0 Åð
+A9 Ä©   C1 ÄÁ   D9 ÄÙ   F1 Äñ   A9 Å©   C1 ÅÁ   D9 ÅÙ   F1 Åñ
+AA Äª   C2 ÄÂ   DA ÄÚ   F2 Äò   AA Åª   C2 ÅÂ   DA ÅÚ   F2 Åò
+AB Ä«   C3 ÄÃ   DB ÄÛ   F3 Äó   AB Å«   C3 ÅÃ   DB ÅÛ   F3 Åó
+AC Ä¬   C4 ÄÄ   DC ÄÜ   F4 Äô   AC Å¬   C4 ÅÄ   DC ÅÜ   F4 Åô
+AD Ä­   C5 ÄÅ   DD ÄÝ   F5 Äõ   AD Å­   C5 ÅÅ   DD ÅÝ   F5 Åõ
+AE Ä®   C6 ÄÆ   DE ÄÞ   F6 Äö   AE Å®   C6 ÅÆ   DE ÅÞ   F6 Åö
+AF Ä¯   C7 ÄÇ   DF Äß   F7 Ä÷   AF Å¯   C7 ÅÇ   DF Åß   F7 Å÷
+B0 Ä°   C8 ÄÈ   E0 Äà   F8 Äø   B0 Å°   C8 ÅÈ   E0 Åà   F8 Åø
+B1 Ä±   C9 ÄÉ   E1 Äá   F9 Äù   B1 Å±   C9 ÅÉ   E1 Åá   F9 Åù
+B2 Ä²   CA ÄÊ   E2 Äâ   FA Äú   B2 Å²   CA ÅÊ   E2 Åâ   FA Åú
+B3 Ä³   CB ÄË   E3 Äã   FB Äû   B3 Å³   CB ÅË   E3 Åã   FB Åû
+B4 Ä´   CC ÄÌ   E4 Ää   FC Äü   B4 Å´   CC ÅÌ   E4 Åä   FC Åü
+B5 Äµ   CD ÄÍ   E5 Äå   FD Äý   B5 Åµ   CD ÅÍ   E5 Åå   FD Åý
+B6 Ä¶   CE ÄÎ   E6 Äæ   FE Äþ   B6 Å¶   CE ÅÎ   E6 Åæ   FE Åþ
+B7 Ä·   CF ÄÏ   E7 Äç           B7 Å·   CF ÅÏ   E7 Åç
+B8 Ä¸   D0 ÄÐ   E8 Äè           B8 Å¸   D0 ÅÐ   E8 Åè
+
+C6                              C7
+-----------------------------   -----------------------------
+A1 Æ¡   B9 Æ¹   D1 ÆÑ   E9 Æé   A1 Ç¡   B9 Ç¹   D1 ÇÑ   E9 Çé
+A2 Æ¢   BA Æº   D2 ÆÒ   EA Æê   A2 Ç¢   BA Çº   D2 ÇÒ   EA Çê
+A3 Æ£   BB Æ»   D3 ÆÓ   EB Æë   A3 Ç£   BB Ç»   D3 ÇÓ   EB Çë
+A4 Æ¤   BC Æ¼   D4 ÆÔ   EC Æì   A4 Ç¤   BC Ç¼   D4 ÇÔ   EC Çì
+A5 Æ¥   BD Æ½   D5 ÆÕ   ED Æí   A5 Ç¥   BD Ç½   D5 ÇÕ   ED Çí
+A6 Æ¦   BE Æ¾   D6 ÆÖ   EE Æî   A6 Ç¦   BE Ç¾   D6 ÇÖ   EE Çî
+A7 Æ§   BF Æ¿   D7 Æ×   EF Æï   A7 Ç§   BF Ç¿   D7 Ç×   EF Çï
+A8 Æ¨   C0 ÆÀ   D8 ÆØ   F0 Æð   A8 Ç¨   C0 ÇÀ   D8 ÇØ   F0 Çð
+A9 Æ©   C1 ÆÁ   D9 ÆÙ   F1 Æñ   A9 Ç©   C1 ÇÁ   D9 ÇÙ   F1 Çñ
+AA Æª   C2 ÆÂ   DA ÆÚ   F2 Æò   AA Çª   C2 ÇÂ   DA ÇÚ   F2 Çò
+AB Æ«   C3 ÆÃ   DB ÆÛ   F3 Æó   AB Ç«   C3 ÇÃ   DB ÇÛ   F3 Çó
+AC Æ¬   C4 ÆÄ   DC ÆÜ   F4 Æô   AC Ç¬   C4 ÇÄ   DC ÇÜ   F4 Çô
+AD Æ­   C5 ÆÅ   DD ÆÝ   F5 Æõ   AD Ç­   C5 ÇÅ   DD ÇÝ   F5 Çõ
+AE Æ®   C6 ÆÆ   DE ÆÞ   F6 Æö   AE Ç®   C6 ÇÆ   DE ÇÞ   F6 Çö
+AF Æ¯   C7 ÆÇ   DF Æß   F7 Æ÷   AF Ç¯   C7 ÇÇ   DF Çß   F7 Ç÷
+B0 Æ°   C8 ÆÈ   E0 Æà   F8 Æø   B0 Ç°   C8 ÇÈ   E0 Çà   F8 Çø
+B1 Æ±   C9 ÆÉ   E1 Æá   F9 Æù   B1 Ç±   C9 ÇÉ   E1 Çá   F9 Çù
+B2 Æ²   CA ÆÊ   E2 Æâ   FA Æú   B2 Ç²   CA ÇÊ   E2 Çâ   FA Çú
+B3 Æ³   CB ÆË   E3 Æã   FB Æû   B3 Ç³   CB ÇË   E3 Çã   FB Çû
+B4 Æ´   CC ÆÌ   E4 Æä   FC Æü   B4 Ç´   CC ÇÌ   E4 Çä   FC Çü
+B5 Æµ   CD ÆÍ   E5 Æå   FD Æý   B5 Çµ   CD ÇÍ   E5 Çå   FD Çý
+B6 Æ¶   CE ÆÎ   E6 Ææ   FE Æþ   B6 Ç¶   CE ÇÎ   E6 Çæ   FE Çþ
+B7 Æ·   CF ÆÏ   E7 Æç           B7 Ç·   CF ÇÏ   E7 Çç
+B8 Æ¸   D0 ÆÐ   E8 Æè           B8 Ç¸   D0 ÇÐ   E8 Çè
+
+C8                            
+-----------------------------
+A1 È¡   B9 È¹   D1 ÈÑ   E9 Èé
+A2 È¢   BA Èº   D2 ÈÒ   EA Èê
+A3 È£   BB È»   D3 ÈÓ   EB Èë
+A4 È¤   BC È¼   D4 ÈÔ   EC Èì
+A5 È¥   BD È½   D5 ÈÕ   ED Èí
+A6 È¦   BE È¾   D6 ÈÖ   EE Èî
+A7 È§   BF È¿   D7 È×   EF Èï
+A8 È¨   C0 ÈÀ   D8 ÈØ   F0 Èð
+A9 È©   C1 ÈÁ   D9 ÈÙ   F1 Èñ
+AA Èª   C2 ÈÂ   DA ÈÚ   F2 Èò
+AB È«   C3 ÈÃ   DB ÈÛ   F3 Èó
+AC È¬   C4 ÈÄ   DC ÈÜ   F4 Èô
+AD È­   C5 ÈÅ   DD ÈÝ   F5 Èõ
+AE È®   C6 ÈÆ   DE ÈÞ   F6 Èö
+AF È¯   C7 ÈÇ   DF Èß   F7 È÷
+B0 È°   C8 ÈÈ   E0 Èà   F8 Èø
+B1 È±   C9 ÈÉ   E1 Èá   F9 Èù
+B2 È²   CA ÈÊ   E2 Èâ   FA Èú
+B3 È³   CB ÈË   E3 Èã   FB Èû
+B4 È´   CC ÈÌ   E4 Èä   FC Èü
+B5 Èµ   CD ÈÍ   E5 Èå   FD Èý
+B6 È¶   CE ÈÎ   E6 Èæ   FE Èþ
+B7 È·   CF ÈÏ   E7 Èç        
+B8 È¸   D0 ÈÐ   E8 Èè        
+
+A4                            
+-----------------------------
+A1 ¤¡   B9 ¤¹   D1 ¤Ñ   E9 ¤é
+A2 ¤¢   BA ¤º   D2 ¤Ò   EA ¤ê
+A3 ¤£   BB ¤»   D3 ¤Ó   EB ¤ë
+A4 ¤¤   BC ¤¼   D4 ¤Ô   EC ¤ì
+A5 ¤¥   BD ¤½   D5 ¤Õ   ED ¤í
+A6 ¤¦   BE ¤¾   D6 ¤Ö   EE ¤î
+A7 ¤§   BF ¤¿   D7 ¤×   EF ¤ï
+A8 ¤¨   C0 ¤À   D8 ¤Ø   F0 ¤ð
+A9 ¤©   C1 ¤Á   D9 ¤Ù   F1 ¤ñ
+AA ¤ª   C2 ¤Â   DA ¤Ú   F2 ¤ò
+AB ¤«   C3 ¤Ã   DB ¤Û   F3 ¤ó
+AC ¤¬   C4 ¤Ä   DC ¤Ü   F4 ¤ô
+AD ¤­   C5 ¤Å   DD ¤Ý   F5 ¤õ
+AE ¤®   C6 ¤Æ   DE ¤Þ   F6 ¤ö
+AF ¤¯   C7 ¤Ç   DF ¤ß   F7 ¤÷
+B0 ¤°   C8 ¤È   E0 ¤à   F8 ¤ø
+B1 ¤±   C9 ¤É   E1 ¤á   F9 ¤ù
+B2 ¤²   CA ¤Ê   E2 ¤â   FA ¤ú
+B3 ¤³   CB ¤Ë   E3 ¤ã   FB ¤û
+B4 ¤´   CC ¤Ì   E4 ¤ä   FC ¤ü
+B5 ¤µ   CD ¤Í   E5 ¤å   FD ¤ý
+B6 ¤¶   CE ¤Î   E6 ¤æ   FE ¤þ
+B7 ¤·   CF ¤Ï   E7 ¤ç       
+B8 ¤¸   D0 ¤Ð   E8 ¤è        

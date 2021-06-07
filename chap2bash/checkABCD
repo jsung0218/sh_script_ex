@@ -1,0 +1,5 @@
+#!/usr/local/bin/bash
+if [ \( "$A" = "$B" \) -a \( "$C" != "$D" \) ]
+then
+        E=${A}${B}${C}${D}
+fi
