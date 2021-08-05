@@ -1,0 +1,63 @@
+# based on http://blogs.pdmlab.com/alexander.zeitler/articles/installing-and-configuring-p4merge-for-git-on-ubuntu/
+
+$ cd ~/Downloads
+
+$ wget https://cdist2.perforce.com/perforce/r18.2/bin.linux26x86_64/p4v.tgz
+
+$ tar zxvf p4v.tgz
+
+$ sudo mkdir /opt/p4v
+
+$ cd p4v-2018.2.1666551
+
+$ sudo mv * /opt/p4v
+
+$ sudo ln -s /opt/p4v/bin/p4merge /usr/local/bin/p4merge
+
+~/.gitconfig
+[color]
+    ui = true
+    diff = true
+    branch = auto
+    status = auto
+[alias]
+  new = checkout -b
+  co = checkout
+  ci = commit
+  cm = commit -m
+  cam = commit -am
+  ca = commit --amend # careful
+  st = status
+  br = branch
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen--> %cr%Creset by %Cblue%cN <%cE>%Creset' --abbre
+v-commit --date=relative
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  s = status --short
+  a = !git add . && git status
+  au = !git add -u . && git statustus
+  aa = !git add . && git add -u . && git status
+  ac = !git add . && git commit
+  acm = !git add . && git commit -m
+  put = push origin HEAD
+  get = pull origin HEAD
+[merge]
+    keepBackup = false;
+    tool = p4merge
+[mergetool]
+    prompt = false
+[mergetool "p4merge"]
+    cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
+[diff]
+    tool = p4merge
+[difftool]
+    prompt = false
+[difftool "p4merge"]
+    cmd = p4merge "$LOCAL" "$REMOTE"
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
